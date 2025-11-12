@@ -1,0 +1,429 @@
+﻿<Window x:Class="GestãoEstoque.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GestãoEstoque.ClassesOrganização"
+        mc:Ignorable="d"
+        Title="Gestão de Estoque" Height="650" Width="1100"
+        WindowStartupLocation="CenterScreen"
+        FontFamily="Segoe UI"
+        Background="#F5F5F5">
+
+    <Window.Resources>
+        <!-- Converters para estoque -->
+        <local:EstoqueToColorConverter x:Key="EstoqueToColorConverter"/>
+        <local:EstoqueToTextColorConverter x:Key="EstoqueToTextColorConverter"/>
+
+        <DropShadowEffect x:Key="ShadowEffect" BlurRadius="10" ShadowDepth="2" Opacity="0.2"/>
+
+        <!-- Estilo para centralizar todo o conteúdo do DataGrid -->
+        <Style x:Key="CenteredDataGridStyle" TargetType="DataGridCell">
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Padding" Value="8,0"/>
+        </Style>
+
+        <!-- Estilo para botões do menu -->
+        <Style x:Key="MenuButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Height" Value="45"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="15,0,0,0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                CornerRadius="4"
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#B71C1C"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Estilo para cards -->
+        <Style x:Key="CardStyle" TargetType="Border">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Padding" Value="20"/>
+            <Setter Property="Margin" Value="0,0,15,0"/>
+            <Setter Property="Width" Value="220"/>
+            <Setter Property="Effect" Value="{StaticResource ShadowEffect}"/>
+        </Style>
+
+        <!-- Estilo para DataGrid -->
+        <Style x:Key="ModernDataGridStyle" TargetType="DataGrid">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="AlternatingRowBackground" Value="#FAFAFA"/>
+            <Setter Property="GridLinesVisibility" Value="None"/>
+            <Setter Property="BorderBrush" Value="#E0E0E0"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="RowHeaderWidth" Value="0"/>
+            <Setter Property="ColumnHeaderHeight" Value="40"/>
+            <Setter Property="HeadersVisibility" Value="Column"/>
+            <Setter Property="CanUserAddRows" Value="False"/>
+            <Setter Property="CanUserDeleteRows" Value="False"/>
+            <Setter Property="CanUserReorderColumns" Value="False"/>
+            <Setter Property="CanUserResizeRows" Value="False"/>
+            <Setter Property="SelectionMode" Value="Single"/>
+            <Setter Property="SelectionUnit" Value="FullRow"/>
+            <Setter Property="AutoGenerateColumns" Value="False"/>
+            <Setter Property="IsReadOnly" Value="True"/>
+            <Setter Property="RowBackground" Value="White"/>
+        </Style>
+
+        <!-- Estilo para cabeçalhos de coluna -->
+        <Style x:Key="DataGridColumnHeaderStyle" TargetType="DataGridColumnHeader">
+            <Setter Property="Background" Value="#F5F5F5"/>
+            <Setter Property="Foreground" Value="#424242"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="BorderThickness" Value="0,0,0,1"/>
+            <Setter Property="BorderBrush" Value="#E0E0E0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- ===== MENU LATERAL ===== -->
+        <Border Background="#D32F2F" Grid.Column="0">
+            <StackPanel VerticalAlignment="Top">
+                <!-- Cabeçalho do menu -->
+                <Border Background="#B71C1C" Padding="15,20">
+                    <TextBlock Text="🧾 Gestão de Estoque" 
+                               FontSize="18" 
+                               Foreground="White" 
+                               FontWeight="Bold"/>
+                </Border>
+
+                <!-- Itens do menu -->
+                <StackPanel Margin="10,20">
+                    <Button Content="📦 Cadastro de Itens" 
+                            Style="{StaticResource MenuButtonStyle}"
+                            Click="AbrirCadastro_Click"/>
+
+                    <Button Content="📝 Emitir OS" 
+                            Style="{StaticResource MenuButtonStyle}"
+                            Click="AbrirEmitirOS_Click"/>
+
+                    <Button Content="📊 Relatórios" 
+                            Style="{StaticResource MenuButtonStyle}"
+                            Click="AbrirRelatorios_Click"/>
+
+                    <!-- Espaçamento -->
+                    <Border Height="20"/>
+
+                    <!-- Rodapé do menu -->
+                    <Button Content="⚙ Configurações" 
+                            Style="{StaticResource MenuButtonStyle}"
+                            Foreground="White" 
+                            Opacity="0.8"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+        <Grid Grid.Column="1" Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Título da página -->
+            <TextBlock Text="Visão Geral" 
+                       FontSize="22" 
+                       FontWeight="SemiBold" 
+                       Margin="0,0,0,20"
+                       Foreground="#333333"/>
+
+            <!-- ===== CARDS DE STATUS ===== -->
+            <ScrollViewer Grid.Row="0" 
+             HorizontalScrollBarVisibility="Auto" 
+             VerticalScrollBarVisibility="Disabled"
+             Margin="0,0,0,25">
+                <StackPanel Orientation="Horizontal">
+                    <!-- Card 1: Total de Itens -->
+                    <Border Style="{StaticResource CardStyle}">
+                        <StackPanel>
+                            <TextBlock Text="Total de Itens" 
+                           Foreground="#757575" 
+                           FontWeight="Medium"/>
+                            <TextBlock x:Name="txtTotalItens" 
+                           Text="0" 
+                           FontSize="28" 
+                           FontWeight="Bold" 
+                           Foreground="#D32F2F"
+                           Margin="0,5,0,0"/>
+                            <TextBlock x:Name="txtVariacaoItens" 
+                           Text="Carregando..." 
+                           Foreground="#757575" 
+                           FontSize="12"
+                           Margin="0,5,0,0"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Card 2: Em Estoque -->
+                    <Border Style="{StaticResource CardStyle}">
+                        <StackPanel>
+                            <TextBlock Text="Em Estoque" 
+                           Foreground="#757575" 
+                           FontWeight="Medium"/>
+                            <TextBlock x:Name="txtEmEstoque" 
+                           Text="0" 
+                           FontSize="28" 
+                           FontWeight="Bold" 
+                           Foreground="#E65100"
+                           Margin="0,5,0,0"/>
+                            <TextBlock x:Name="txtVariacaoEstoque" 
+                           Text="Carregando..." 
+                           Foreground="#757575" 
+                           FontSize="12"
+                           Margin="0,5,0,0"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Card 3: Valor Total -->
+                    <Border Style="{StaticResource CardStyle}">
+                        <StackPanel>
+                            <TextBlock Text="Valor em Estoque" 
+                           Foreground="#757575" 
+                           FontWeight="Medium"/>
+                            <TextBlock x:Name="txtValorEstoque" 
+                           Text="R$ 0,00" 
+                           FontSize="28" 
+                           FontWeight="Bold" 
+                           Foreground="#2E7D32"
+                           Margin="0,5,0,0"/>
+                            <TextBlock x:Name="txtInfoValor" 
+                           Text="Valor total" 
+                           Foreground="#757575" 
+                           FontSize="12"
+                           Margin="0,5,0,0"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Card 4: Itens Críticos -->
+                    <Border Style="{StaticResource CardStyle}" Margin="0">
+                        <StackPanel>
+                            <TextBlock Text="Itens Críticos" 
+                           Foreground="#757575" 
+                           FontWeight="Medium"/>
+                            <TextBlock x:Name="txtItensCriticos" 
+                           Text="0" 
+                           FontSize="28" 
+                           FontWeight="Bold" 
+                           Foreground="#D81B60"
+                           Margin="0,5,0,0"/>
+                            <TextBlock x:Name="txtInfoCriticos" 
+                           Text="Estoque baixo" 
+                           Foreground="#757575" 
+                           FontSize="12"
+                           Margin="0,5,0,0"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Card 5: Itens Favoritos -->
+                    <Border Style="{StaticResource CardStyle}" Margin="5,0,0,0">
+                        <StackPanel>
+                            <TextBlock Text="Favoritos" 
+                           Foreground="#757575" 
+                           FontWeight="Medium"/>
+                            <TextBlock x:Name="txtItensFavoritos" 
+                           Text="0" 
+                           FontSize="28" 
+                           FontWeight="Bold" 
+                           Foreground="#7B1FA2"
+                           Margin="0,5,0,0"/>
+                            <TextBlock x:Name="txtInfoFavoritos" 
+                           Text="Itens destacados" 
+                           Foreground="#757575" 
+                           FontSize="12"
+                           Margin="0,5,0,0"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </ScrollViewer>
+
+            <!-- ===== TABELA ===== -->
+            <Border Grid.Row="1" 
+                    Background="White" 
+                    CornerRadius="8" 
+                    Padding="1"
+                    Effect="{StaticResource ShadowEffect}">
+                <StackPanel>
+                    <DataGrid x:Name="dgProdutos" 
+                             Style="{StaticResource ModernDataGridStyle}"
+                             ColumnHeaderStyle="{StaticResource DataGridColumnHeaderStyle}"
+                             RowHeight="35"
+                             CellStyle="{StaticResource CenteredDataGridStyle}">
+                        <DataGrid.Columns>
+                            <!-- Status do Estoque -->
+                            <DataGridTemplateColumn Header="Status" Width="100">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Border Background="{Binding TemEstoque, Converter={StaticResource EstoqueToColorConverter}}" 
+                                                CornerRadius="4" Padding="5,2" Margin="2">
+                                            <TextBlock Text="{Binding StatusEstoque}" 
+                                                       FontSize="11" 
+                                                       FontWeight="SemiBold"
+                                                       Foreground="White" 
+                                                       HorizontalAlignment="Center"
+                                                       VerticalAlignment="Center"/>
+                                        </Border>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+                            <!-- Item -->
+                            <DataGridTextColumn Header="Item" Binding="{Binding Item}" Width="80">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="HorizontalAlignment" Value="Left"/>
+                                        <Setter Property="Margin" Value="10,0,0,0"/>
+                                        <Setter Property="VerticalAlignment" Value="Center"/>
+                                        <Setter Property="FontWeight" Value="SemiBold"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+
+                            <!-- Código -->
+                            <DataGridTextColumn Header="Código" Binding="{Binding Codigo}" Width="120">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                                        <Setter Property="VerticalAlignment" Value="Center"/>
+                                        <Setter Property="FontFamily" Value="Consolas"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+
+                            <!-- Descrição -->
+                            <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}" Width="*" MinWidth="200">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="HorizontalAlignment" Value="Left"/>
+                                        <Setter Property="Margin" Value="10,0,0,0"/>
+                                        <Setter Property="VerticalAlignment" Value="Center"/>
+                                        <Setter Property="TextWrapping" Value="NoWrap"/>
+                                        <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+
+                            <!-- Unidade -->
+                            <DataGridTextColumn Header="UN" Binding="{Binding Unidade}" Width="60">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                                        <Setter Property="VerticalAlignment" Value="Center"/>
+                                        <Setter Property="FontWeight" Value="SemiBold"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+
+                            <!-- Quantidade -->
+                            <DataGridTextColumn Header="Quantidade" Binding="{Binding QuantidadeFormatada}" Width="100">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="HorizontalAlignment" Value="Right"/>
+                                        <Setter Property="Margin" Value="0,0,10,0"/>
+                                        <Setter Property="VerticalAlignment" Value="Center"/>
+                                        <Setter Property="FontFamily" Value="Consolas"/>
+                                        <Setter Property="Foreground" Value="{Binding TemEstoque, Converter={StaticResource EstoqueToTextColorConverter}}"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+
+                            <!-- Preço -->
+                            <DataGridTextColumn Header="Preço" Binding="{Binding PrecoFormatado}" Width="100">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="HorizontalAlignment" Value="Right"/>
+                                        <Setter Property="Margin" Value="0,0,10,0"/>
+                                        <Setter Property="VerticalAlignment" Value="Center"/>
+                                        <Setter Property="FontFamily" Value="Consolas"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+
+                            <!-- Total -->
+                            <DataGridTextColumn Header="Total" Binding="{Binding TotalFormatado}" Width="120">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="HorizontalAlignment" Value="Right"/>
+                                        <Setter Property="Margin" Value="0,0,10,0"/>
+                                        <Setter Property="VerticalAlignment" Value="Center"/>
+                                        <Setter Property="FontWeight" Value="SemiBold"/>
+                                        <Setter Property="FontFamily" Value="Consolas"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <!-- BOTÕES DE AÇÃO -->
+                    <Border Background="#F8F9FA" Padding="10" BorderBrush="#E0E0E0" BorderThickness="0,1,0,0">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                            <!-- Botão Adicionar -->
+                            <Button x:Name="btnAdicionarItem" 
+                                    Content="＋ Adicionar Item" 
+                                    Width="130" Height="35"
+                                    Margin="0,0,10,0"
+                                    Background="#4CAF50" 
+                                    Foreground="White" 
+                                    FontSize="13" 
+                                    FontWeight="SemiBold"
+                                    BorderThickness="0"
+                                    Cursor="Hand"
+                                    Click="btnAdicionarItem_Click"/>
+
+                            <!-- Botão Editar -->
+                            <Button x:Name="btnEditar" 
+                                    Content="✏️ Editar" 
+                                    Width="100" Height="35"
+                                    Margin="0,0,10,0"
+                                    Background="#2196F3" 
+                                    Foreground="White" 
+                                    FontSize="13" 
+                                    FontWeight="SemiBold"
+                                    BorderThickness="0"
+                                    Cursor="Hand"
+                                    Click="BtnEditar_Click"/>
+
+                            <!-- Botão Deletar -->
+                            <Button x:Name="btnDeletar" 
+                                    Content="🗑️ Deletar" 
+                                    Width="100" Height="35"
+                                    Background="#F44336" 
+                                    Foreground="White" 
+                                    FontSize="13" 
+                                    FontWeight="SemiBold"
+                                    BorderThickness="0"
+                                    Cursor="Hand"
+                                    Click="BtnDeletar_Click"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

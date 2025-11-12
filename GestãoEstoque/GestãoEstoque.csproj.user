@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="TelasOrganização\EditarItem.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TelasOrganização\SolicitarQuantidade.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TelasOrganização\RelatorioVisualizador.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TelasOrganização\CadastrarItem.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TelasOrganização\EmitirOS.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

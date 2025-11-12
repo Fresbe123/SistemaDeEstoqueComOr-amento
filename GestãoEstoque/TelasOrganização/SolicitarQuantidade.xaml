@@ -1,0 +1,122 @@
+﻿<Window x:Class="GestãoEstoque.SolicitarQuantidade"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Quantidade e Desconto do Item" 
+        Height="400" 
+        Width="450"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        SizeToContent="WidthAndHeight">
+
+    <Grid Margin="25" Width="400">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Título -->
+        <TextBlock Grid.Row="0" Text="Informe a quantidade e desconto:" 
+                   FontSize="16" FontWeight="SemiBold" 
+                   HorizontalAlignment="Center" Margin="0,0,0,15"/>
+
+        <!-- Informações do Item -->
+        <Border Grid.Row="1" Background="#F8F9FA" BorderBrush="#E0E0E0" 
+                BorderThickness="1" Padding="12" CornerRadius="4" Margin="0,0,0,10">
+            <StackPanel>
+                <TextBlock x:Name="txtItemInfo" FontSize="13" FontWeight="SemiBold" 
+                           TextWrapping="Wrap" TextAlignment="Center"/>
+                <TextBlock x:Name="txtEstoqueInfo" FontSize="12" 
+                           Foreground="Green" TextAlignment="Center" Margin="0,5,0,0"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Quantidade -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" 
+                    HorizontalAlignment="Center" Margin="0,0,0,15">
+            <TextBlock Text="Quantidade:" VerticalAlignment="Center" 
+                       FontWeight="SemiBold" Width="100" TextAlignment="Right"
+                       Margin="0,0,15,0" FontSize="13"/>
+            <TextBox x:Name="txtQuantidade" Width="120" Padding="10" 
+                     Text="1" TextAlignment="Center" FontSize="14"
+                     VerticalContentAlignment="Center"/>
+        </StackPanel>
+
+        <!-- Desconto -->
+        <StackPanel Grid.Row="3" Orientation="Horizontal" 
+                    HorizontalAlignment="Center" Margin="0,0,0,20">
+            <TextBlock Text="Desconto:" VerticalAlignment="Center" 
+                       FontWeight="SemiBold" Width="100" TextAlignment="Right"
+                       Margin="0,0,15,0" FontSize="13"/>
+            <TextBox x:Name="txtDesconto" Width="80" Padding="10" 
+                     Text="0" TextAlignment="Center" FontSize="14"
+                     VerticalContentAlignment="Center"/>
+            <TextBlock Text="%" VerticalAlignment="Center" Margin="8,0,0,0" 
+                       FontSize="13" FontWeight="SemiBold"/>
+        </StackPanel>
+
+        <!-- Cálculos -->
+        <Border Grid.Row="4" Background="#FFF3E0" BorderBrush="#FF9800" 
+                BorderThickness="1" Padding="15" CornerRadius="6" Margin="0,0,0,15">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Subtotal -->
+                <StackPanel Grid.Column="0" HorizontalAlignment="Center">
+                    <TextBlock Text="Subtotal" FontSize="12" FontWeight="SemiBold" 
+                               HorizontalAlignment="Center" Margin="0,0,0,3"/>
+                    <TextBlock x:Name="txtSubtotal" Text="R$ 0,00" FontSize="13" 
+                               HorizontalAlignment="Center"/>
+                </StackPanel>
+
+                <!-- Separador -->
+                <Rectangle Grid.Column="1" Width="1" Fill="#E0E0E0" 
+                           Margin="15,5" VerticalAlignment="Stretch"/>
+
+                <!-- Desconto -->
+                <StackPanel Grid.Column="2" HorizontalAlignment="Center">
+                    <TextBlock Text="Desconto" FontSize="12" FontWeight="SemiBold" 
+                               HorizontalAlignment="Center" Margin="0,0,0,3"/>
+                    <TextBlock x:Name="txtValorDesconto" Text="R$ 0,00" FontSize="13" 
+                               Foreground="#D32F2F" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- Total -->
+        <Border Grid.Row="5" Background="#D32F2F" CornerRadius="6" 
+                Padding="15" Margin="0,0,0,20">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="" FontSize="14" FontWeight="Bold" 
+                           Foreground="White" Margin="0,0,10,0"/>
+                <TextBlock x:Name="txtTotal" Text="R$ 0,00" FontSize="16" 
+                           FontWeight="Bold" Foreground="White"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Botões -->
+        <StackPanel Grid.Row="6" Orientation="Horizontal" 
+                    HorizontalAlignment="Center" Margin="0,10,0,0">
+            <Button Content="Cancelar" Width="100" Height="35" Margin="0,0,15,0" 
+                    Click="BtnCancelar_Click"
+                    Background="Transparent" BorderBrush="#E0E0E0" 
+                    BorderThickness="1" FontWeight="SemiBold"/>
+            <Button Content="Confirmar" Width="100" Height="35" 
+                    Background="#4CAF50" Foreground="White" 
+                    FontWeight="SemiBold" Click="BtnConfirmar_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

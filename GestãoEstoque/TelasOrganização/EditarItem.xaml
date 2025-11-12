@@ -1,0 +1,112 @@
+﻿<Window x:Class="GestãoEstoque.EditarItem"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Editar Item" 
+        Height="500" 
+        Width="600"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize">
+
+    <Window.Resources>
+        <Style x:Key="ModernTextBox" TargetType="TextBox">
+            <Setter Property="Padding" Value="8"/>
+            <Setter Property="BorderBrush" Value="#E0E0E0"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+
+        <Style x:Key="FormLabel" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#616161"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Margin" Value="0,0,0,4"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Cabeçalho -->
+        <Border Grid.Row="0" Background="#2196F3" CornerRadius="4" Padding="15" Margin="0,0,0,20">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="✏️" FontSize="20" Margin="0,0,10,0"/>
+                <TextBlock Text="Editar Item" 
+                           Foreground="White" 
+                           FontSize="18" 
+                           FontWeight="Bold"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Formulário de Edição -->
+        <Grid Grid.Row="1" Margin="0,0,0,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Coluna 1 -->
+            <StackPanel Grid.Row="0" Grid.Column="0" Margin="5">
+                <TextBlock Text="Item*" Style="{StaticResource FormLabel}"/>
+                <TextBox x:Name="txtItem" Style="{StaticResource ModernTextBox}"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Grid.Column="0" Margin="5">
+                <TextBlock Text="Código*" Style="{StaticResource FormLabel}"/>
+                <TextBox x:Name="txtCodigo" Style="{StaticResource ModernTextBox}"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" Grid.Column="0" Margin="5">
+                <TextBlock Text="Unidade*" Style="{StaticResource FormLabel}"/>
+                <TextBox x:Name="txtUnidade" Style="{StaticResource ModernTextBox}"/>
+            </StackPanel>
+
+            <!-- Coluna 2 -->
+            <StackPanel Grid.Row="0" Grid.Column="1" Margin="5">
+                <TextBlock Text="Descrição*" Style="{StaticResource FormLabel}"/>
+                <TextBox x:Name="txtDescricao" Style="{StaticResource ModernTextBox}"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Grid.Column="1" Margin="5">
+                <TextBlock Text="Quantidade*" Style="{StaticResource FormLabel}"/>
+                <TextBox x:Name="txtQuantidade" Style="{StaticResource ModernTextBox}"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" Grid.Column="1" Margin="5">
+                <TextBlock Text="Preço*" Style="{StaticResource FormLabel}"/>
+                <TextBox x:Name="txtPreco" Style="{StaticResource ModernTextBox}"/>
+            </StackPanel>
+
+            <!-- Favorito (ocupa duas colunas) -->
+            <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="5">
+                <CheckBox x:Name="chkFavorito" Content="Item Favorito" 
+                          FontWeight="SemiBold" FontSize="13" Margin="0,10,0,0"/>
+            </StackPanel>
+        </Grid>
+
+        <!-- Botões -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Cancelar" Width="100" Height="35" Margin="0,0,10,0" 
+                    Click="BtnCancelar_Click"
+                    Background="Transparent" BorderBrush="#E0E0E0" 
+                    BorderThickness="1" FontWeight="SemiBold"/>
+            <Button Content="Salvar" Width="100" Height="35" 
+                    Background="#4CAF50" Foreground="White" 
+                    FontWeight="SemiBold" Click="BtnSalvar_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
