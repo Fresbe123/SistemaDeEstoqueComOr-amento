@@ -1,6 +1,8 @@
 ﻿using GestãoEstoque.ClassesOrganização;
 using Microsoft.VisualBasic;
+using Microsoft.Win32;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 
 namespace GestãoEstoque
@@ -21,15 +24,15 @@ namespace GestãoEstoque
     /// </summary>
     public partial class MainWindow : Window
     {
-
         private ObservableCollection<ItemEstoque> ItensObservaveis => ArmazenamentoTemporario.Itens;
+        private bool _mostrandoApenasFavoritos = false;
+        private ObservableCollection<ItemEstoque> _todosItensBackup;
 
         public MainWindow()
         {
             InitializeComponent();
             CarregarItens();
             DataContext = this;
-
             CarregarDadosCards();
         }
 
@@ -127,6 +130,7 @@ namespace GestãoEstoque
             int itensCriticos = int.Parse(txtItensCriticos.Text);
             if (itensCriticos > 10)
             {
+                // Você pode adicionar lógica aqui se quiser
             }
         }
 
@@ -134,6 +138,83 @@ namespace GestãoEstoque
         public void AtualizarCardsDashboard()
         {
             CarregarDadosCards();
+        }
+
+        // BOTÃO FAVORITAR - NOVO
+        private void BtnFavoritar_Click(object sender, RoutedEventArgs e)
+        {
+            if (dgProdutos.SelectedItem is ItemEstoque itemSelecionado)
+            {
+                // Alterna entre favorito/não favorito
+                itemSelecionado.Favorito = !itemSelecionado.Favorito;
+
+                // Reordena a lista (favoritos primeiro)
+                ReordenarListaComFavoritos();
+
+                // Atualiza os cards
+                CarregarDadosCards();
+
+                string status = itemSelecionado.Favorito ? "favoritado" : "removido dos favoritos";
+                string mensagem = itemSelecionado.Favorito ?
+                    $"Item '{itemSelecionado.Descricao}' foi favoritado e movido para o topo!" :
+                    $"Item '{itemSelecionado.Descricao}' foi removido dos favoritos.";
+
+                MessageBox.Show(mensagem, "Sucesso",
+                              MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show("Selecione um item para favoritar.", "Aviso",
+                              MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
+
+        private void ReordenarListaComFavoritos()
+        {
+            // Ordena a lista: favoritos primeiro, depois pelo Item
+            var listaOrdenada = ArmazenamentoTemporario.Itens
+                .OrderBy(item => item.OrdemFavorito) // 0 para favoritos, 1 para não favoritos
+                .ThenBy(item => item.Item) // Ordena por Item dentro de cada grupo
+                .ToList();
+
+            // Limpa e recria a coleção para refletir a nova ordem
+            var novaLista = new ObservableCollection<ItemEstoque>(listaOrdenada);
+            ArmazenamentoTemporario.Itens.Clear();
+
+            foreach (var item in novaLista)
+            {
+                ArmazenamentoTemporario.Itens.Add(item);
+            }
+
+            // Atualiza a exibição
+            dgProdutos.Items.Refresh();
+        }
+
+        // MÉTODO PARA FILTRAR APENAS FAVORITOS
+        private void MostrarApenasFavoritos_Click(object sender, RoutedEventArgs e)
+        {
+            var botao = sender as Button;
+
+            if (!_mostrandoApenasFavoritos)
+            {
+                // Salva backup da lista completa
+                _todosItensBackup = new ObservableCollection<ItemEstoque>(ArmazenamentoTemporario.Itens);
+
+                // Filtra apenas favoritos
+                var favoritos = new ObservableCollection<ItemEstoque>(
+                    ArmazenamentoTemporario.Itens.Where(item => item.Favorito));
+
+                dgProdutos.ItemsSource = favoritos;
+                _mostrandoApenasFavoritos = true;
+                botao.Content = "📋 Todos os Itens";
+            }
+            else
+            {
+                // Restaura lista completa
+                dgProdutos.ItemsSource = _todosItensBackup;
+                _mostrandoApenasFavoritos = false;
+                botao.Content = "⭐ Apenas Favoritos";
+            }
         }
 
         private void BtnEditar_Click(object sender, RoutedEventArgs e)
@@ -152,7 +233,8 @@ namespace GestãoEstoque
                     {
                         ArmazenamentoTemporario.Itens[indice] = itemEditado;
 
-                        dgProdutos.Items.Refresh();
+                        // Reordena após edição (para manter favoritos no topo)
+                        ReordenarListaComFavoritos();
 
                         MessageBox.Show("Item editado com sucesso!", "Sucesso",
                                       MessageBoxButton.OK, MessageBoxImage.Information);
@@ -180,7 +262,11 @@ namespace GestãoEstoque
                 {
                     ArmazenamentoTemporario.Itens.Remove(itemSelecionado);
 
-                    dgProdutos.Items.Refresh();
+                    // Reordena após deletar
+                    ReordenarListaComFavoritos();
+
+                    // Atualiza os cards
+                    CarregarDadosCards();
 
                     MessageBox.Show("Item deletado com sucesso!", "Sucesso",
                                   MessageBoxButton.OK, MessageBoxImage.Information);
@@ -192,7 +278,6 @@ namespace GestãoEstoque
                               MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
-
 
         private void btnAdicionarItem_Click(object sender, RoutedEventArgs e)
         {
@@ -250,7 +335,9 @@ namespace GestãoEstoque
                 MessageBox.Show("Erro ao atualizar quantidade: " + ex.Message, "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            dgProdutos.Items.Refresh();
+            // Reordena após adicionar quantidade
+            ReordenarListaComFavoritos();
+            CarregarDadosCards();
         }
 
         private bool TryParseDecimal(string s, out decimal value)
@@ -273,12 +360,15 @@ namespace GestãoEstoque
         public void AtualizarListaItens()
         {
             dgProdutos.Items.Refresh();
-
             CarregarDadosCards();
         }
 
         private void CarregarItens()
         {
+            // Ordena os itens (favoritos primeiro)
+            ReordenarListaComFavoritos();
+
+            // Atribui ao DataGrid
             dgProdutos.ItemsSource = ArmazenamentoTemporario.Itens;
 
             dgProdutos.RowHeight = 35;
@@ -292,14 +382,25 @@ namespace GestãoEstoque
         {
             CadastrarItem cadastrarItem = new CadastrarItem();
             cadastrarItem.ShowDialog();
-            CarregarItens(); 
-
+            CarregarItens();
         }
 
         private void AbrirEmitirOS_Click(object sender, RoutedEventArgs e)
         {
             EmitirOS osWindow = new EmitirOS(ArmazenamentoTemporario.Itens);
             osWindow.Show();
+        }
+
+        private void BtnCriarOrcamento_Click(object sender, RoutedEventArgs e)
+        {
+            if (ItensObservaveis.Count == 0)
+            {
+                MessageBox.Show("Não há itens disponíveis para criar orçamento.");
+                return;
+            }
+
+            var criarOrcamento = new CriarOrcamento(new ObservableCollection<ItemEstoque>(ItensObservaveis));
+            criarOrcamento.ShowDialog();
         }
 
         private void AbrirRelatorios_Click(object sender, RoutedEventArgs e)

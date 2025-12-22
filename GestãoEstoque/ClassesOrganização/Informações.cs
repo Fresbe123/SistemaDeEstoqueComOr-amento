@@ -79,7 +79,13 @@ namespace GestãoEstoque.ClassesOrganização
             public Deslocamento Deslocamento { get; set; } = new Deslocamento();
             public List<ItemEstoque> Itens { get; set; } = new List<ItemEstoque>();
             public decimal ValorTotal { get; set; }
+            public decimal ValorMaoDeObra { get; set; }
             public decimal ValorTotalComDeslocamento => ValorTotal + (Deslocamento?.ValorDeslocamento ?? 0);
+            public bool EhOrcamento { get; set; } = false;
+            public string NumeroOrcamento { get; set; } = "";
+            public DateTime DataValidade { get; set; } = DateTime.Now.AddDays(30);
         }
+
+
     }
 }

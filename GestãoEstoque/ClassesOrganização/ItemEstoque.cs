@@ -14,11 +14,13 @@ namespace GestãoEstoque.ClassesOrganização
         private string _preco;
         private string _total;
 
+
         public string Item { get; set; }
         public string Nome { get; set; }
         public string Codigo { get; set; }
         public string Descricao { get; set; }
         public string Unidade { get; set; }
+        private bool _favorito;
 
         public string Preco
         {
@@ -56,8 +58,26 @@ namespace GestãoEstoque.ClassesOrganização
             }
         }
 
+        public bool Favorito
+        {
+            get => _favorito;
+            set
+            {
+                if (_favorito != value)
+                {
+                    _favorito = value;
+                    OnPropertyChanged();
+                    OnPropertyChanged(nameof(OrdemFavorito)); // Para ordenação
+                    OnPropertyChanged(nameof(IconeFavorito)); // Para ícone
+                }
+            }
+        }
+
+        public int OrdemFavorito => Favorito ? 0 : 1;
+
+        public string IconeFavorito => Favorito ? "★" : "☆";
+
         public string Desconto { get; set; }
-        public bool Favorito { get; set; }
 
         //Propriedades para formatação consistente
 

@@ -79,7 +79,7 @@ namespace GestãoEstoque
                                   MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
-
+                    
                 Quantidade = quantidade;
                 DescontoPercentual = descontoPercentual;
                 DialogResult = true;

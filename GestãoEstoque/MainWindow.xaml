@@ -125,6 +125,15 @@
                             Style="{StaticResource MenuButtonStyle}"
                             Click="AbrirEmitirOS_Click"/>
 
+                    <Button Content="📋 Criar Orçamento" 
+                            Style="{StaticResource MenuButtonStyle}"
+                            Click="BtnCriarOrcamento_Click"/>
+
+                    <!-- Apenas Favoritos -->
+                    <Button Content="⭐ Apenas Favoritos" 
+                            Style="{StaticResource MenuButtonStyle}"
+                            Click="MostrarApenasFavoritos_Click"/>
+
                     <Button Content="📊 Relatórios" 
                             Style="{StaticResource MenuButtonStyle}"
                             Click="AbrirRelatorios_Click"/>
@@ -275,7 +284,46 @@
                              ColumnHeaderStyle="{StaticResource DataGridColumnHeaderStyle}"
                              RowHeight="35"
                              CellStyle="{StaticResource CenteredDataGridStyle}">
+
+                        <!-- ESTILO para colorir as linhas dos favoritos -->
+                        <DataGrid.RowStyle>
+                            <Style TargetType="DataGridRow">
+                                <Setter Property="Background" Value="White"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Favorito}" Value="True">
+                                        <Setter Property="Background" Value="#F3E5F5"/>
+                                        <!-- Roxo bem claro -->
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.RowStyle>
+
                         <DataGrid.Columns>
+                            <!-- Favorito -->
+                            <DataGridTemplateColumn Header="⭐" Width="50">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding IconeFavorito}" 
+                                                  FontSize="16"
+                                                  HorizontalAlignment="Center"
+                                                  VerticalAlignment="Center">
+                                            <TextBlock.Style>
+                                                <Style TargetType="TextBlock">
+                                                    <Setter Property="Foreground" Value="#CCCCCC"/>
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding Favorito}" Value="True">
+                                                            <Setter Property="Foreground" Value="#9C27B0"/>
+                                                            <!-- Roxo -->
+                                                            <Setter Property="FontWeight" Value="Bold"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </TextBlock.Style>
+                                        </TextBlock>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
                             <!-- Status do Estoque -->
                             <DataGridTemplateColumn Header="Status" Width="100">
                                 <DataGridTemplateColumn.CellTemplate>
@@ -301,6 +349,13 @@
                                         <Setter Property="Margin" Value="10,0,0,0"/>
                                         <Setter Property="VerticalAlignment" Value="Center"/>
                                         <Setter Property="FontWeight" Value="SemiBold"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Favorito}" Value="True">
+                                                <Setter Property="Foreground" Value="#7B1FA2"/>
+                                                <!-- Roxo escuro -->
+                                                <Setter Property="FontWeight" Value="Bold"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
                                     </Style>
                                 </DataGridTextColumn.ElementStyle>
                             </DataGridTextColumn>
@@ -312,6 +367,13 @@
                                         <Setter Property="HorizontalAlignment" Value="Center"/>
                                         <Setter Property="VerticalAlignment" Value="Center"/>
                                         <Setter Property="FontFamily" Value="Consolas"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Favorito}" Value="True">
+                                                <Setter Property="Foreground" Value="#7B1FA2"/>
+                                                <!-- Roxo escuro -->
+                                                <Setter Property="FontWeight" Value="Bold"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
                                     </Style>
                                 </DataGridTextColumn.ElementStyle>
                             </DataGridTextColumn>
@@ -325,6 +387,13 @@
                                         <Setter Property="VerticalAlignment" Value="Center"/>
                                         <Setter Property="TextWrapping" Value="NoWrap"/>
                                         <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Favorito}" Value="True">
+                                                <Setter Property="Foreground" Value="#7B1FA2"/>
+                                                <!-- Roxo escuro -->
+                                                <Setter Property="FontWeight" Value="Bold"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
                                     </Style>
                                 </DataGridTextColumn.ElementStyle>
                             </DataGridTextColumn>
@@ -336,6 +405,12 @@
                                         <Setter Property="HorizontalAlignment" Value="Center"/>
                                         <Setter Property="VerticalAlignment" Value="Center"/>
                                         <Setter Property="FontWeight" Value="SemiBold"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Favorito}" Value="True">
+                                                <Setter Property="Foreground" Value="#7B1FA2"/>
+                                                <!-- Roxo escuro -->
+                                            </DataTrigger>
+                                        </Style.Triggers>
                                     </Style>
                                 </DataGridTextColumn.ElementStyle>
                             </DataGridTextColumn>
@@ -349,6 +424,13 @@
                                         <Setter Property="VerticalAlignment" Value="Center"/>
                                         <Setter Property="FontFamily" Value="Consolas"/>
                                         <Setter Property="Foreground" Value="{Binding TemEstoque, Converter={StaticResource EstoqueToTextColorConverter}}"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Favorito}" Value="True">
+                                                <Setter Property="Foreground" Value="#7B1FA2"/>
+                                                <!-- Roxo escuro -->
+                                                <Setter Property="FontWeight" Value="Bold"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
                                     </Style>
                                 </DataGridTextColumn.ElementStyle>
                             </DataGridTextColumn>
@@ -361,6 +443,13 @@
                                         <Setter Property="Margin" Value="0,0,10,0"/>
                                         <Setter Property="VerticalAlignment" Value="Center"/>
                                         <Setter Property="FontFamily" Value="Consolas"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Favorito}" Value="True">
+                                                <Setter Property="Foreground" Value="#7B1FA2"/>
+                                                <!-- Roxo escuro -->
+                                                <Setter Property="FontWeight" Value="Bold"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
                                     </Style>
                                 </DataGridTextColumn.ElementStyle>
                             </DataGridTextColumn>
@@ -374,6 +463,13 @@
                                         <Setter Property="VerticalAlignment" Value="Center"/>
                                         <Setter Property="FontWeight" Value="SemiBold"/>
                                         <Setter Property="FontFamily" Value="Consolas"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Favorito}" Value="True">
+                                                <Setter Property="Foreground" Value="#7B1FA2"/>
+                                                <!-- Roxo escuro -->
+                                                <Setter Property="FontWeight" Value="Bold"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
                                     </Style>
                                 </DataGridTextColumn.ElementStyle>
                             </DataGridTextColumn>
@@ -408,6 +504,19 @@
                                     BorderThickness="0"
                                     Cursor="Hand"
                                     Click="BtnEditar_Click"/>
+
+                            <!-- Favoritar -->
+                            <Button x:Name="btnFavoritar" 
+                                    Content="⭐ Favoritar" 
+                                    Width="110" Height="35"
+                                    Margin="0,0,10,0"
+                                    Background="#9C27B0" 
+                                    Foreground="White" 
+                                    FontSize="13" 
+                                    FontWeight="SemiBold"
+                                    BorderThickness="0"
+                                    Cursor="Hand"
+                                    Click="BtnFavoritar_Click"/>
 
                             <!-- Botão Deletar -->
                             <Button x:Name="btnDeletar" 

@@ -16,5 +16,6 @@ namespace GestãoEstoque.ClassesOrganização
             r.Id = Relatorios.Count + 1;
             Relatorios.Add(r);
         }
+
     }
 }

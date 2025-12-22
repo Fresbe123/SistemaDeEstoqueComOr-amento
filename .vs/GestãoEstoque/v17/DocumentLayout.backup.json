@@ -3,34 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\solicitarquantidade.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\solicitarquantidade.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\solicitarquantidade.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\solicitarquantidade.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\relatoriovisualizador.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\relatoriovisualizador.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\relatoriovisualizador.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\relatoriovisualizador.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\emitiros.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\emitiros.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\emitiros.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\emitiros.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -39,24 +11,48 @@
       "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\editaritem.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\editaritem.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\editaritem.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\emitiros.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\emitiros.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\classesorganiza\u00E7\u00E3o\\pdflogohelper2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\classesorganiza\u00E7\u00E3o\\pdflogohelper2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\classesorganiza\u00E7\u00E3o\\pdflogohelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\classesorganiza\u00E7\u00E3o\\pdflogohelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\criarorcamento.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\criarorcamento.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\classesorganiza\u00E7\u00E3o\\relatorioosmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\classesorganiza\u00E7\u00E3o\\relatorioosmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\relatoriovisualizador.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\relatoriovisualizador.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\cadastraritem.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\cadastraritem.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\cadastraritem.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\cadastraritem.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\relatoriovisualizador.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\relatoriovisualizador.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\classesorganiza\u00E7\u00E3o\\relatoriosclassearmazenamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\classesorganiza\u00E7\u00E3o\\relatoriosclassearmazenamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\classesorganiza\u00E7\u00E3o\\relatorioosmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\classesorganiza\u00E7\u00E3o\\relatorioosmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\classesorganiza\u00E7\u00E3o\\dadosorcamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\classesorganiza\u00E7\u00E3o\\dadosorcamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\classesorganiza\u00E7\u00E3o\\itemestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -67,20 +63,56 @@
       "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\classesorganiza\u00E7\u00E3o\\informa\u00E7\u00F5es.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\classesorganiza\u00E7\u00E3o\\estoquetocolorconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\classesorganiza\u00E7\u00E3o\\estoquetocolorconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\classesorganiza\u00E7\u00E3o\\relatoriosclassearmazenamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\classesorganiza\u00E7\u00E3o\\relatoriosclassearmazenamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\criarorcamento.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\criarorcamento.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\classesorganiza\u00E7\u00E3o\\favoritoconverters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\classesorganiza\u00E7\u00E3o\\favoritoconverters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\cadastraritem.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\cadastraritem.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\editaritem.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\editaritem.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\solicitarquantidadeorcamento.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\solicitarquantidadeorcamento.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\solicitarquantidade.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\solicitarquantidade.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\solicitarquantidadeorcamento.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\solicitarquantidadeorcamento.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\classesorganiza\u00E7\u00E3o\\armazenamentotemporario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\classesorganiza\u00E7\u00E3o\\armazenamentotemporario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\obj\\Debug\\net8.0-windows\\TelasOrganiza\u00E7\u00E3o\\JanelaSelecaoItens.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Gest\u00E3oEstoque\\obj\\Debug\\net8.0-windows\\TelasOrganiza\u00E7\u00E3o\\JanelaSelecaoItens.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\classesorganiza\u00E7\u00E3o\\estoquetocolorconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\classesorganiza\u00E7\u00E3o\\estoquetocolorconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\solicitarquantidade.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|solutionrelative:gest\u00E3oestoque\\telasorganiza\u00E7\u00E3o\\solicitarquantidade.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\obj\\Debug\\net8.0-windows\\TelasOrganiza\u00E7\u00E3o\\JanelaSelecaoItens.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Gest\u00E3oEstoque\\obj\\Debug\\net8.0-windows\\TelasOrganiza\u00E7\u00E3o\\JanelaSelecaoItens.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{82ED1D16-711E-4361-8AAE-3A2BD113CD13}|Gest\u00E3oEstoque\\Gest\u00E3oEstoque.csproj|c:\\users\\neto\\documents\\c# projetos\\gest\u00E3oestoque\\gest\u00E3oestoque\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -94,123 +126,108 @@
       "DocumentGroups": [
         {
           "DockedWidth": 335,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SolicitarQuantidade.xaml",
-              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\SolicitarQuantidade.xaml",
-              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\SolicitarQuantidade.xaml",
-              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\SolicitarQuantidade.xaml",
-              "RelativeToolTip": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\SolicitarQuantidade.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-09-25T20:49:07.511Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SolicitarQuantidade.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\SolicitarQuantidade.xaml.cs",
-              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\SolicitarQuantidade.xaml.cs",
-              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\SolicitarQuantidade.xaml.cs",
-              "RelativeToolTip": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\SolicitarQuantidade.xaml.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAUwEoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T20:49:38.099Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\MainWindow.xaml",
-              "RelativeToolTip": "Gest\u00E3oEstoque\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-01T12:34:56.415Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\MainWindow.xaml.cs",
-              "RelativeToolTip": "Gest\u00E3oEstoque\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAmwH0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T23:04:25.249Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RelatorioVisualizador.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\RelatorioVisualizador.xaml.cs",
-              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\RelatorioVisualizador.xaml.cs",
-              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\RelatorioVisualizador.xaml.cs",
-              "RelativeToolTip": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\RelatorioVisualizador.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T15:59:50.921Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RelatorioVisualizador.xaml",
-              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\RelatorioVisualizador.xaml",
-              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\RelatorioVisualizador.xaml",
-              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\RelatorioVisualizador.xaml",
-              "RelativeToolTip": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\RelatorioVisualizador.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-09-22T15:06:34.825Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EmitirOS.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\EmitirOS.xaml.cs",
-              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\EmitirOS.xaml.cs",
-              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\EmitirOS.xaml.cs",
-              "RelativeToolTip": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\EmitirOS.xaml.cs",
-              "ViewState": "AgIAAMcCAAAAAAAAAAAiwPQBAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T15:14:01.043Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "EmitirOS.xaml",
               "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\EmitirOS.xaml",
               "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\EmitirOS.xaml",
               "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\EmitirOS.xaml",
               "RelativeToolTip": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\EmitirOS.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-03T17:52:57.474Z"
+              "WhenOpened": "2025-07-03T17:52:57.474Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "RelatorioOSmanager.cs",
+              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\RelatorioOSmanager.cs",
+              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\RelatorioOSmanager.cs",
+              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\RelatorioOSmanager.cs",
+              "RelativeToolTip": "Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\RelatorioOSmanager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T23:29:14.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmitirOS.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\EmitirOS.xaml.cs",
+              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\EmitirOS.xaml.cs",
+              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\EmitirOS.xaml.cs",
+              "RelativeToolTip": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\EmitirOS.xaml.cs",
+              "ViewState": "AgIAAP0BAAAAAAAAAAAAAAYCAABlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T15:14:01.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\MainWindow.xaml",
+              "RelativeToolTip": "Gest\u00E3oEstoque\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-21T13:24:29.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Gest\u00E3oEstoque\\MainWindow.xaml.cs",
+              "ViewState": "AgIAANkAAAAAAAAAAAAmwJkBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T17:34:13.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "EditarItem.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\EditarItem.xaml.cs",
               "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\EditarItem.xaml.cs",
               "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\EditarItem.xaml.cs",
               "RelativeToolTip": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\EditarItem.xaml.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAA5wCAAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T17:38:12.622Z"
+              "WhenOpened": "2025-10-07T17:38:12.622Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "EditarItem.xaml",
-              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\EditarItem.xaml",
-              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\EditarItem.xaml",
-              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\EditarItem.xaml",
-              "RelativeToolTip": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\EditarItem.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-07T17:37:42.381Z"
+              "DocumentIndex": 5,
+              "Title": "PdfLogoHelper2.cs",
+              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\PdfLogoHelper2.cs",
+              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\PdfLogoHelper2.cs",
+              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\PdfLogoHelper2.cs",
+              "RelativeToolTip": "Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\PdfLogoHelper2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T13:56:02.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PdfLogoHelper.cs",
+              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\PdfLogoHelper.cs",
+              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\PdfLogoHelper.cs",
+              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\PdfLogoHelper.cs",
+              "RelativeToolTip": "Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\PdfLogoHelper.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAmwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T13:43:08.73Z"
             },
             {
               "$type": "Document",
@@ -220,104 +237,115 @@
               "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\CadastrarItem.xaml.cs",
               "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\CadastrarItem.xaml.cs",
               "RelativeToolTip": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\CadastrarItem.xaml.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAYwGMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAwHsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-04T00:12:49.83Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CadastrarItem.xaml",
-              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\CadastrarItem.xaml",
-              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\CadastrarItem.xaml",
-              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\CadastrarItem.xaml",
-              "RelativeToolTip": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\CadastrarItem.xaml",
+              "DocumentIndex": 7,
+              "Title": "CriarOrcamento.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\CriarOrcamento.xaml.cs",
+              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\CriarOrcamento.xaml.cs",
+              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\CriarOrcamento.xaml.cs",
+              "RelativeToolTip": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\CriarOrcamento.xaml.cs",
+              "ViewState": "AgIAAGkCAAAAAAAAAAAiwI8CAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T15:48:34.543Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RelatorioVisualizador.xaml",
+              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\RelatorioVisualizador.xaml",
+              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\RelatorioVisualizador.xaml",
+              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\RelatorioVisualizador.xaml",
+              "RelativeToolTip": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\RelatorioVisualizador.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-01T12:35:45.624Z"
+              "WhenOpened": "2025-11-27T17:40:53.248Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RelatorioVisualizador.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\RelatorioVisualizador.xaml.cs",
+              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\RelatorioVisualizador.xaml.cs",
+              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\RelatorioVisualizador.xaml.cs",
+              "RelativeToolTip": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\RelatorioVisualizador.xaml.cs",
+              "ViewState": "AgIAAKoAAAAAAAAAAAAYwNIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T14:21:00.67Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "DadosOrcamento.cs",
+              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\DadosOrcamento.cs",
+              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\DadosOrcamento.cs",
+              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\DadosOrcamento.cs",
+              "RelativeToolTip": "Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\DadosOrcamento.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T08:57:28.902Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "RelatoriosClasseArmazenamento.cs",
               "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\RelatoriosClasseArmazenamento.cs",
               "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\RelatoriosClasseArmazenamento.cs",
               "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\RelatoriosClasseArmazenamento.cs",
               "RelativeToolTip": "Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\RelatoriosClasseArmazenamento.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-19T19:52:07.864Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "RelatorioOSmanager.cs",
-              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\RelatorioOSmanager.cs",
-              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\RelatorioOSmanager.cs",
-              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\RelatorioOSmanager.cs",
-              "RelativeToolTip": "Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\RelatorioOSmanager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T23:29:14.184Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "ItemEstoque.cs",
-              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\ItemEstoque.cs",
-              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\ItemEstoque.cs",
-              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\ItemEstoque.cs",
-              "RelativeToolTip": "Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\ItemEstoque.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAswFoAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T11:54:02.357Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
               "Title": "Informa\u00E7\u00F5es.cs",
               "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\Informa\u00E7\u00F5es.cs",
               "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\Informa\u00E7\u00F5es.cs",
               "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\Informa\u00E7\u00F5es.cs",
               "RelativeToolTip": "Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\Informa\u00E7\u00F5es.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAAAFAAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T12:50:37.089Z"
+              "WhenOpened": "2025-11-19T17:11:12.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ItemEstoque.cs",
+              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\ItemEstoque.cs",
+              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\ItemEstoque.cs",
+              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\ItemEstoque.cs",
+              "RelativeToolTip": "Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\ItemEstoque.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAI0AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T11:54:02.357Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "EstoqueToColorConverter.cs",
-              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\EstoqueToColorConverter.cs",
-              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\EstoqueToColorConverter.cs",
-              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\EstoqueToColorConverter.cs",
-              "RelativeToolTip": "Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\EstoqueToColorConverter.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwC8AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T14:53:40.334Z"
+              "Title": "CriarOrcamento.xaml",
+              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\CriarOrcamento.xaml",
+              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\CriarOrcamento.xaml",
+              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\CriarOrcamento.xaml",
+              "RelativeToolTip": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\CriarOrcamento.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-18T20:44:36.117Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "ArmazenamentoTemporario.cs",
-              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\ArmazenamentoTemporario.cs",
-              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\ArmazenamentoTemporario.cs",
-              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\ArmazenamentoTemporario.cs",
-              "RelativeToolTip": "Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\ArmazenamentoTemporario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Title": "FavoritoConverters.cs",
+              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\FavoritoConverters.cs",
+              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\FavoritoConverters.cs",
+              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\FavoritoConverters.cs",
+              "RelativeToolTip": "Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\FavoritoConverters.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAcAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-03T17:56:14.492Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "JanelaSelecaoItens.g.cs",
-              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\obj\\Debug\\net8.0-windows\\TelasOrganiza\u00E7\u00E3o\\JanelaSelecaoItens.g.cs",
-              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\obj\\Debug\\net8.0-windows\\TelasOrganiza\u00E7\u00E3o\\JanelaSelecaoItens.g.cs",
-              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\obj\\Debug\\net8.0-windows\\TelasOrganiza\u00E7\u00E3o\\JanelaSelecaoItens.g.cs",
-              "RelativeToolTip": "Gest\u00E3oEstoque\\obj\\Debug\\net8.0-windows\\TelasOrganiza\u00E7\u00E3o\\JanelaSelecaoItens.g.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAAsAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T20:26:12.301Z"
+              "WhenOpened": "2025-12-04T22:47:46.008Z"
             },
             {
               "$type": "Document",
@@ -333,18 +361,118 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CadastrarItem.xaml",
+              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\CadastrarItem.xaml",
+              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\CadastrarItem.xaml",
+              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\CadastrarItem.xaml",
+              "RelativeToolTip": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\CadastrarItem.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-01T12:35:45.624Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 20,
+              "Title": "EditarItem.xaml",
+              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\EditarItem.xaml",
+              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\EditarItem.xaml",
+              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\EditarItem.xaml",
+              "RelativeToolTip": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\EditarItem.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-07T17:37:42.381Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "SolicitarQuantidadeOrcamento.xaml",
+              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\SolicitarQuantidadeOrcamento.xaml",
+              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\SolicitarQuantidadeOrcamento.xaml",
+              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\SolicitarQuantidadeOrcamento.xaml",
+              "RelativeToolTip": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\SolicitarQuantidadeOrcamento.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-20T10:21:02.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "SolicitarQuantidadeOrcamento.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\SolicitarQuantidadeOrcamento.xaml.cs",
+              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\SolicitarQuantidadeOrcamento.xaml.cs",
+              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\SolicitarQuantidadeOrcamento.xaml.cs",
+              "RelativeToolTip": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\SolicitarQuantidadeOrcamento.xaml.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAmwF0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T10:21:42.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "SolicitarQuantidade.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\SolicitarQuantidade.xaml.cs",
+              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\SolicitarQuantidade.xaml.cs",
+              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\SolicitarQuantidade.xaml.cs",
+              "RelativeToolTip": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\SolicitarQuantidade.xaml.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAswFQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T18:14:16.798Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ArmazenamentoTemporario.cs",
+              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\ArmazenamentoTemporario.cs",
+              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\ArmazenamentoTemporario.cs",
+              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\ArmazenamentoTemporario.cs",
+              "RelativeToolTip": "Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\ArmazenamentoTemporario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T17:56:14.492Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "EstoqueToColorConverter.cs",
+              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\EstoqueToColorConverter.cs",
+              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\EstoqueToColorConverter.cs",
+              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\EstoqueToColorConverter.cs",
+              "RelativeToolTip": "Gest\u00E3oEstoque\\ClassesOrganiza\u00E7\u00E3o\\EstoqueToColorConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T11:43:07.052Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "SolicitarQuantidade.xaml",
+              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\SolicitarQuantidade.xaml",
+              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\SolicitarQuantidade.xaml",
+              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\SolicitarQuantidade.xaml",
+              "RelativeToolTip": "Gest\u00E3oEstoque\\TelasOrganiza\u00E7\u00E3o\\SolicitarQuantidade.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-20T10:23:04.499Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "JanelaSelecaoItens.g.cs",
+              "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\obj\\Debug\\net8.0-windows\\TelasOrganiza\u00E7\u00E3o\\JanelaSelecaoItens.g.cs",
+              "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\obj\\Debug\\net8.0-windows\\TelasOrganiza\u00E7\u00E3o\\JanelaSelecaoItens.g.cs",
+              "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\obj\\Debug\\net8.0-windows\\TelasOrganiza\u00E7\u00E3o\\JanelaSelecaoItens.g.cs",
+              "RelativeToolTip": "Gest\u00E3oEstoque\\obj\\Debug\\net8.0-windows\\TelasOrganiza\u00E7\u00E3o\\JanelaSelecaoItens.g.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T20:26:12.301Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\App.xaml",
               "RelativeDocumentMoniker": "Gest\u00E3oEstoque\\App.xaml",
               "ToolTip": "C:\\Users\\Neto\\Documents\\C# projetos\\Gest\u00E3oEstoque\\Gest\u00E3oEstoque\\App.xaml",
               "RelativeToolTip": "Gest\u00E3oEstoque\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-03T17:28:43.239Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+              "WhenOpened": "2025-07-03T17:28:43.239Z",
+              "EditorCaption": ""
             }
           ]
         }

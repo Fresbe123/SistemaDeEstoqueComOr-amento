@@ -3,6 +3,7 @@ using iTextSharp.text;
 using iTextSharp.text.pdf;
 using iTextSharp.text.pdf.draw;
 using Microsoft.VisualBasic;
+using Microsoft.VisualBasic;
 using Org.BouncyCastle.Pqc.Crypto.Lms;
 using System;
 using System.Collections.Generic;
@@ -22,8 +23,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Microsoft.VisualBasic;
 using static GestãoEstoque.ClassesOrganização.Informações;
+using static Org.BouncyCastle.Bcpg.Attr.ImageAttrib;
 
 namespace GestãoEstoque
 {
@@ -39,6 +40,7 @@ namespace GestãoEstoque
         private List<ItemEstoque> ItensParaDebitar = new List<ItemEstoque>();
 
         private decimal _valorDeslocamento = 0;
+        private decimal _valorMaoDeObra = 0; // NOVO CAMPO
 
         public EmitirOS(ObservableCollection<ItemEstoque> itensDisponiveis)
         {
@@ -67,7 +69,7 @@ namespace GestãoEstoque
                 Descricao = original.Descricao,
                 Unidade = original.Unidade,
                 Preco = original.Preco,
-                Quantidade = original.Quantidade, 
+                Quantidade = original.Quantidade,
                 Desconto = original.Desconto,
                 Total = original.Total,
                 Favorito = original.Favorito
@@ -79,7 +81,7 @@ namespace GestãoEstoque
             decimal totalItens = ItensSelecionados.Sum(item =>
                 decimal.TryParse(item.Total, out decimal totalItem) ? totalItem : 0);
 
-            decimal totalGeral = totalItens + _valorDeslocamento;
+            decimal totalGeral = totalItens + _valorDeslocamento + _valorMaoDeObra; // ATUALIZADO
 
             txtTotalOS.Text = totalGeral.ToString("C", CultureInfo.GetCultureInfo("pt-BR"));
         }
@@ -173,6 +175,29 @@ namespace GestãoEstoque
             };
         }
 
+        private void TextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                // Move para o próximo controle
+                TraversalRequest request = new TraversalRequest(FocusNavigationDirection.Next);
+                if (Keyboard.FocusedElement is UIElement elementWithFocus)
+                {
+                    elementWithFocus.MoveFocus(request);
+                }
+                e.Handled = true;
+            }
+            else if (e.Key == Key.Escape)
+            {
+                // Limpa o texto do TextBox quando pressionar ESC
+                if (sender is TextBox textBox)
+                {
+                    textBox.Clear();
+                    e.Handled = true;
+                }
+            }
+        }
+
         private void BtnRemover_Click(object sender, RoutedEventArgs e)
         {
             if (lstSelecionados.SelectedItem is ItemEstoque itemSelecionado)
@@ -218,6 +243,12 @@ namespace GestãoEstoque
             CalcularDeslocamento();
         }
 
+        // NOVO MÉTODO: Cálculo da mão de obra
+        private void TxtMaoDeObra_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            CalcularMaoDeObra();
+        }
+
         private void CalcularDeslocamento()
         {
             try
@@ -244,8 +275,80 @@ namespace GestãoEstoque
             }
             catch
             {
-
+                // Ignora erro
             }
+        }
+
+        // NOVO MÉTODO: Calcular mão de obra
+        private void CalcularMaoDeObra()
+        {
+            try
+            {
+                if (!string.IsNullOrEmpty(txtMaoDeObra.Text))
+                {
+                    string valorTexto = txtMaoDeObra.Text.Replace("R$", "").Trim();
+                    if (decimal.TryParse(valorTexto, NumberStyles.Currency, CultureInfo.GetCultureInfo("pt-BR"), out decimal valor))
+                    {
+                        _valorMaoDeObra = valor;
+                    }
+                    else
+                    {
+                        _valorMaoDeObra = 0;
+                    }
+                }
+                else
+                {
+                    _valorMaoDeObra = 0;
+                }
+
+                AtualizarTotalGeral();
+            }
+            catch
+            {
+                _valorMaoDeObra = 0;
+                AtualizarTotalGeral();
+            }
+        }
+
+        public void ReceberDadosOrcamento(ObservableCollection<ItemEstoque> itensOrcamento,
+                                         decimal valorDeslocamento,
+                                         decimal valorMaoDeObra, 
+                                         string numeroOrcamento,
+                                         decimal kmPercorridos,
+                                         decimal valorPorKm)
+        {
+            // Adicionar itens do orçamento
+            foreach (var item in itensOrcamento)
+            {
+                var itemCopia = CriarCopiaItem(item);
+                ItensSelecionados.Add(itemCopia);
+
+                // Registrar para débito no estoque
+                ItensParaDebitar.Add(new ItemEstoque
+                {
+                    Codigo = itemCopia.Codigo,
+                    Quantidade = itemCopia.Quantidade,
+                    Descricao = itemCopia.Descricao
+                });
+            }
+
+            // Configurar deslocamento COMPLETO 
+            _valorDeslocamento = valorDeslocamento;
+
+            // Configurar mão de obra
+            _valorMaoDeObra = valorMaoDeObra;
+
+            // PREENCHER OS CAMPOS DE KM E VALOR POR KM
+            txtKmPercorridos.Text = kmPercorridos.ToString();
+            txtValorPorKm.Text = valorPorKm.ToString("C", CultureInfo.GetCultureInfo("pt-BR"));
+            txtValorDeslocamento.Text = valorDeslocamento.ToString("C", CultureInfo.GetCultureInfo("pt-BR"));
+
+            // Preencher campo de mão de obra
+            txtMaoDeObra.Text = valorMaoDeObra.ToString("C", CultureInfo.GetCultureInfo("pt-BR"));
+
+            // Atualizar totais
+            AtualizarTotalGeral();
+            lstSelecionados.Items.Refresh();
         }
 
         // Método: Atualizar estoque real APENAS na emissão
@@ -386,6 +489,9 @@ namespace GestãoEstoque
                     Console.WriteLine($"Erro ao calcular deslocamento: {ex.Message}");
                 }
 
+                // NOVO: Adicionar mão de obra ao orçamento
+                orcamento.ValorMaoDeObra = _valorMaoDeObra;
+
                 orcamento.Itens = ItensSelecionados.ToList();
                 orcamento.ValorTotal = ItensSelecionados.Sum(item => decimal.TryParse(item.Total, out var total) ? total : 0);
 
@@ -395,8 +501,11 @@ namespace GestãoEstoque
                 );
 
                 // Configurações do documento
-                iTextSharp.text.Document doc = new iTextSharp.text.Document(PageSize.A4, 20, 20, 20, 20);
+                iTextSharp.text.Document doc = new iTextSharp.text.Document(PageSize.A4, 20, 20, 60, 20); 
                 iTextSharp.text.pdf.PdfWriter writer = iTextSharp.text.pdf.PdfWriter.GetInstance(doc, new FileStream(caminhoArquivo, FileMode.Create));
+
+                writer.PageEvent = new PdfLogoHelper2();
+
                 doc.Open();
 
                 // --- FONTES ---
@@ -407,13 +516,13 @@ namespace GestãoEstoque
                 iTextSharp.text.Font fPequeno = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 8, iTextSharp.text.Font.NORMAL, iTextSharp.text.BaseColor.BLACK);
 
                 // --- CABEÇALHO DO DOCUMENTO ---
-                iTextSharp.text.Paragraph tituloDoc = new iTextSharp.text.Paragraph("DOCUMENTO AUXILIAR DE VENDA - ORÇAMENTO", fTituloPrincipal);
-                tituloDoc.Alignment = iTextSharp.text.Element.ALIGN_CENTER;
+                iTextSharp.text.Paragraph tituloDoc = new iTextSharp.text.Paragraph("ORDEM DE SERVIÇO - ORÇAMENTO", fTituloPrincipal);
+                tituloDoc.Alignment = iTextSharp.text.Element.ALIGN_RIGHT;
                 tituloDoc.SpacingAfter = 5f;
                 doc.Add(tituloDoc);
 
-                iTextSharp.text.Paragraph subtituloDoc = new iTextSharp.text.Paragraph("NÃO É DOCUMENTO FISCAL - NÃO É VÁLIDO COMO RECIBO E COMO GARANTIA DE MERCADORIA - NÃO COMPROVA PAGAMENTO", fPequeno);
-                subtituloDoc.Alignment = iTextSharp.text.Element.ALIGN_CENTER;
+                iTextSharp.text.Paragraph subtituloDoc = new iTextSharp.text.Paragraph("NÃO É DOCUMENTO FISCAL - NÃO É VÁLIDO COMO RECIBO E COMO GARANTIA DE MERCADORIA -\n NÃO COMPROVA PAGAMENTO", fPequeno);
+                subtituloDoc.Alignment = iTextSharp.text.Element.ALIGN_RIGHT;
                 subtituloDoc.SpacingAfter = 15f;
                 doc.Add(subtituloDoc);
 
@@ -517,6 +626,27 @@ namespace GestãoEstoque
                     doc.Add(tabelaDeslocamento);
                 }
 
+                // --- MÃO DE OBRA ---
+                if (_valorMaoDeObra > 0)
+                {
+                    iTextSharp.text.Paragraph tituloMaoDeObra = new iTextSharp.text.Paragraph("Mão de Obra", fTituloSecao);
+                    tituloMaoDeObra.SpacingAfter = 5f;
+                    doc.Add(tituloMaoDeObra);
+
+                    iTextSharp.text.pdf.PdfPTable tabelaMaoDeObra = new iTextSharp.text.pdf.PdfPTable(1);
+                    tabelaMaoDeObra.WidthPercentage = 100;
+                    tabelaMaoDeObra.SpacingAfter = 10f;
+
+                    string textoMaoDeObra = $"Valor da Mão de Obra: {_valorMaoDeObra.ToString("C", CultureInfo.GetCultureInfo("pt-BR"))}";
+
+                    iTextSharp.text.pdf.PdfPCell cellMaoDeObra = new iTextSharp.text.pdf.PdfPCell(new iTextSharp.text.Phrase(textoMaoDeObra, fNegrito));
+                    cellMaoDeObra.BorderWidth = 1;
+                    cellMaoDeObra.Padding = 8f;
+                    cellMaoDeObra.BorderColor = iTextSharp.text.BaseColor.BLACK;
+                    tabelaMaoDeObra.AddCell(cellMaoDeObra);
+                    doc.Add(tabelaMaoDeObra);
+                }
+
                 // --- IDENTIFICAÇÃO DA TRANSPORTADORA ---
                 iTextSharp.text.Paragraph tituloTransportadora = new iTextSharp.text.Paragraph("Identificação da Transportadora", fTituloSecao);
                 tituloTransportadora.SpacingAfter = 5f;
@@ -576,10 +706,10 @@ namespace GestãoEstoque
                 doc.Add(new iTextSharp.text.Chunk(new iTextSharp.text.pdf.draw.LineSeparator(1f, 100, iTextSharp.text.BaseColor.BLACK, iTextSharp.text.Element.ALIGN_CENTER, -1)));
                 doc.Add(iTextSharp.text.Chunk.NEWLINE);
 
-                // --- TABELA DE ITENS COM DESCONTO ---
+                // --- TABELA DE ITENS ---
                 iTextSharp.text.pdf.PdfPTable tabelaItens = new iTextSharp.text.pdf.PdfPTable(8);
                 tabelaItens.WidthPercentage = 100;
-                tabelaItens.SetWidths(new float[] { 6, 10, 25, 6, 10, 12, 12, 9 });
+                tabelaItens.SetWidths(new float[] { 10, 10, 25, 6, 10, 12, 12, 9 });
                 tabelaItens.SpacingAfter = 15f;
 
                 string[] headers = { "Item", "Código", "Descrição", "UN", "Quantidade", "Preço", "Desconto", "Total" };
@@ -612,7 +742,7 @@ namespace GestãoEstoque
                     decimal totalItem = (quantidade * precoUnitario) - valorDesconto;
                     valorTotalProdutos += totalItem;
 
-                    AdicionarCelulaComBorda(tabelaItens, itemNumero.ToString(), fNormal, iTextSharp.text.Element.ALIGN_CENTER);
+                    AdicionarCelulaComBorda(tabelaItens, item.Item, fNormal, iTextSharp.text.Element.ALIGN_CENTER);
                     AdicionarCelulaComBorda(tabelaItens, item.Codigo, fNormal, iTextSharp.text.Element.ALIGN_CENTER);
                     AdicionarCelulaComBorda(tabelaItens, item.Descricao, fNormal, iTextSharp.text.Element.ALIGN_LEFT);
                     AdicionarCelulaComBorda(tabelaItens, item.Unidade, fNormal, iTextSharp.text.Element.ALIGN_CENTER);
@@ -661,18 +791,52 @@ namespace GestãoEstoque
                     AdicionarLinhaResumoSimples(cellValores, "Valor do deslocamento:", orcamento.Deslocamento.ValorDeslocamento.ToString("N2"), fNormal);
                 }
 
+                // NOVO: Valor da mão de obra (se houver)
+                if (_valorMaoDeObra > 0)
+                {
+                    AdicionarLinhaResumoSimples(cellValores, "Valor da mão de obra:", _valorMaoDeObra.ToString("N2"), fNormal);
+                }
+
                 // Valor líquido (total geral)
-                decimal valorLiquido = valorTotalProdutos + (orcamento.Deslocamento?.ValorDeslocamento ?? 0);
+                decimal valorLiquido = valorTotalProdutos +
+                                      (orcamento.Deslocamento?.ValorDeslocamento ?? 0) +
+                                      _valorMaoDeObra; // ATUALIZADO
                 AdicionarLinhaResumoSimples(cellValores, "Valor líquido:", valorLiquido.ToString("N2"), fNegrito);
 
                 tabelaResumo.AddCell(cellValores);
 
                 doc.Add(tabelaResumo);
 
+                // --- ASSINATURA DO CLIENTE ---
+                doc.Add(iTextSharp.text.Chunk.NEWLINE);
+                doc.Add(iTextSharp.text.Chunk.NEWLINE);
+
+                // Linha para assinatura
+                iTextSharp.text.pdf.draw.LineSeparator linhaAssinatura = new iTextSharp.text.pdf.draw.LineSeparator(1f, 100f, iTextSharp.text.BaseColor.BLACK, iTextSharp.text.Element.ALIGN_CENTER, -1);
+                doc.Add(linhaAssinatura);
+
+                // Texto da assinatura
+                iTextSharp.text.Paragraph textoAssinatura = new iTextSharp.text.Paragraph("Assinatura do Cliente", fNormal);
+                textoAssinatura.Alignment = iTextSharp.text.Element.ALIGN_CENTER;
+                textoAssinatura.SpacingBefore = 5f;
+                textoAssinatura.SpacingAfter = 20f;
+                doc.Add(textoAssinatura);
+
+                // --- DECLARAÇÃO DE CIÊNCIA ---
+                iTextSharp.text.Paragraph declaracao = new iTextSharp.text.Paragraph(
+                    "Declaro ter ciência das condições deste orçamento e concordo com os termos apresentados.",
+                    new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 9, iTextSharp.text.Font.ITALIC));
+                declaracao.Alignment = iTextSharp.text.Element.ALIGN_CENTER;
+                declaracao.SpacingBefore = 10f;
+                declaracao.SpacingAfter = 15f;
+                doc.Add(declaracao);
+
                 iTextSharp.text.Paragraph rodape = new iTextSharp.text.Paragraph($"Página 1 de 1", fPequeno);
                 rodape.Alignment = iTextSharp.text.Element.ALIGN_CENTER;
                 rodape.SpacingBefore = 10f;
                 doc.Add(rodape);
+
+                doc.Close();
 
                 doc.Close();
 
@@ -682,8 +846,9 @@ namespace GestãoEstoque
                     {
                         Cliente = orcamento.Destinatario.Nome,
                         Data = DateTime.Now.ToString("dd/MM/yyyy HH:mm"),
-                        ValorTotal = valorLiquido, // Agora inclui deslocamento
-                        CaminhoArquivo = caminhoArquivo
+                        ValorTotal = valorLiquido, 
+                        CaminhoArquivo = caminhoArquivo,
+                        Tipo = "OS" 
                     };
                     GestãoEstoque.ClassesOrganização.RelatorioOSmanager.Registrar(rel);
                 }
@@ -707,6 +872,8 @@ namespace GestãoEstoque
                 MessageBox.Show($"Erro ao emitir OS: {ex.Message}", "Erro",
                               MessageBoxButton.OK, MessageBoxImage.Error);
             }
+
+
         }
 
         // Métodos auxiliares para adicionar células

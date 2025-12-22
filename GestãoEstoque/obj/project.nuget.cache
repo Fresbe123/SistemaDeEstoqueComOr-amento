@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "s/LeYVR/+Ro=",
+  "dgSpecHash": "lSZC0U3oW18=",
   "success": true,
   "projectFilePath": "C:\\Users\\Neto\\Documents\\C# projetos\\GestãoEstoque\\GestãoEstoque\\GestãoEstoque.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Neto\\.nuget\\packages\\bouncycastle.cryptography\\2.4.0\\bouncycastle.cryptography.2.4.0.nupkg.sha512",
     "C:\\Users\\Neto\\.nuget\\packages\\itextsharp\\5.5.13.4\\itextsharp.5.5.13.4.nupkg.sha512",
-    "C:\\Users\\Neto\\.nuget\\packages\\modernwpfui\\0.9.6\\modernwpfui.0.9.6.nupkg.sha512"
+    "C:\\Users\\Neto\\.nuget\\packages\\modernwpfui\\0.9.6\\modernwpfui.0.9.6.nupkg.sha512",
+    "C:\\Users\\Neto\\.nuget\\packages\\system.io.pipelines\\10.0.0\\system.io.pipelines.10.0.0.nupkg.sha512",
+    "C:\\Users\\Neto\\.nuget\\packages\\system.text.encodings.web\\10.0.0\\system.text.encodings.web.10.0.0.nupkg.sha512",
+    "C:\\Users\\Neto\\.nuget\\packages\\system.text.json\\10.0.0\\system.text.json.10.0.0.nupkg.sha512"
   ],
   "logs": [
     {

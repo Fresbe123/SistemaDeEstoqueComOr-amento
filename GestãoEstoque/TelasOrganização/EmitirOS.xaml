@@ -55,56 +55,56 @@
                 <StackPanel Grid.Column="0" Grid.Row="0" Margin="5">
                     <TextBlock Text="Denominação*" FontWeight="SemiBold" Margin="0,0,0,5"/>
                     <TextBox x:Name="txtEmitenteNome" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" 
-                             Text="[NOME DA SUA EMPRESA]"/>
+                             Text="Figueiredo e Massaroli LTDA" PreviewKeyDown="TextBox_KeyDown"/>
                 </StackPanel>
 
                 <!-- CNPJ -->
                 <StackPanel Grid.Column="1" Grid.Row="0" Margin="5">
                     <TextBlock Text="CNPJ*" FontWeight="SemiBold" Margin="0,0,0,5"/>
                     <TextBox x:Name="txtEmitenteCNPJ" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1"
-                             Text="[00.000.000/0001-00]"/>
+                             Text="37.930.819/0001-68" PreviewKeyDown="TextBox_KeyDown"/>
                 </StackPanel>
 
                 <!-- Endereço -->
                 <StackPanel Grid.Column="2" Grid.Row="0" Margin="5">
                     <TextBlock Text="Endereço*" FontWeight="SemiBold" Margin="0,0,0,5"/>
                     <TextBox x:Name="txtEmitenteEndereco" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1"
-                             Text="[ENDEREÇO COMPLETO]"/>
+                             Text="Everest ar condicionado – Anexo ao Posto JK" PreviewKeyDown="TextBox_KeyDown"/>
                 </StackPanel>
 
                 <!-- Bairro -->
                 <StackPanel Grid.Column="3" Grid.Row="0" Margin="5">
                     <TextBlock Text="Bairro*" FontWeight="SemiBold" Margin="0,0,0,5"/>
                     <TextBox x:Name="txtEmitenteBairro" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1"
-                             Text="[BAIRRO]"/>
+                             Text="Zona Rural" PreviewKeyDown="TextBox_KeyDown"/>
                 </StackPanel>
 
                 <!-- Cidade -->
                 <StackPanel Grid.Column="0" Grid.Row="1" Margin="5">
                     <TextBlock Text="Cidade*" FontWeight="SemiBold" Margin="0,0,0,5"/>
                     <TextBox x:Name="txtEmitenteCidade" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1"
-                             Text="[CIDADE]"/>
+                             Text="Comodoro" PreviewKeyDown="TextBox_KeyDown"/>
                 </StackPanel>
 
                 <!-- Estado -->
                 <StackPanel Grid.Column="1" Grid.Row="1" Margin="5">
                     <TextBlock Text="Estado*" FontWeight="SemiBold" Margin="0,0,0,5"/>
                     <TextBox x:Name="txtEmitenteEstado" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1"
-                             Text="[UF]"/>
+                             Text="MT" PreviewKeyDown="TextBox_KeyDown"/>
                 </StackPanel>
 
                 <!-- CEP -->
                 <StackPanel Grid.Column="2" Grid.Row="1" Margin="5">
                     <TextBlock Text="CEP*" FontWeight="SemiBold" Margin="0,0,0,5"/>
                     <TextBox x:Name="txtEmitenteCEP" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1"
-                             Text="[00.000-000]"/>
+                             Text="78.310-000" PreviewKeyDown="TextBox_KeyDown"/>
                 </StackPanel>
 
                 <!-- Telefone -->
                 <StackPanel Grid.Column="3" Grid.Row="1" Margin="5">
                     <TextBlock Text="Telefone*" FontWeight="SemiBold" Margin="0,0,0,5"/>
                     <TextBox x:Name="txtEmitenteTelefone" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1"
-                             Text="[(00) 0000-0000]"/>
+                             Text="(69) 992388781" PreviewKeyDown="TextBox_KeyDown"/>
                 </StackPanel>
             </Grid>
         </GroupBox>
@@ -122,31 +122,31 @@
             <!-- Nome do cliente -->
             <StackPanel Grid.Column="0" Margin="5">
                 <TextBlock Text="Nome do Cliente*" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtCliente" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1"/>
+                <TextBox x:Name="txtCliente" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
             </StackPanel>
 
             <!-- CPF/CNPJ -->
             <StackPanel Grid.Column="1" Margin="5">
                 <TextBlock Text="CPF/CNPJ" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtCpfCnpj" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1"/>
+                <TextBox x:Name="txtCpfCnpj" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
             </StackPanel>
 
             <!-- Telefone -->
             <StackPanel Grid.Column="2" Margin="5">
                 <TextBlock Text="Telefone" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtTelefone" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1"/>
+                <TextBox x:Name="txtTelefone" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
             </StackPanel>
 
             <!-- Celular -->
             <StackPanel Grid.Column="3" Margin="5">
                 <TextBlock Text="Celular" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtCelular" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1"/>
+                <TextBox x:Name="txtCelular" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
             </StackPanel>
 
             <!-- E-mail -->
             <StackPanel Grid.Column="4" Margin="5">
                 <TextBlock Text="E-mail" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtEmail" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1"/>
+                <TextBox x:Name="txtEmail" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
             </StackPanel>
         </Grid>
 
@@ -164,31 +164,31 @@
             <!-- Endereço -->
             <StackPanel Grid.Column="0" Margin="5">
                 <TextBlock Text="Endereço" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtEndereco" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1"/>
+                <TextBox x:Name="txtEndereco" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
             </StackPanel>
 
             <!-- Bairro -->
             <StackPanel Grid.Column="1" Margin="5">
                 <TextBlock Text="Bairro" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtBairro" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1"/>
+                <TextBox x:Name="txtBairro" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
             </StackPanel>
 
             <!-- Cidade -->
             <StackPanel Grid.Column="2" Margin="5">
                 <TextBlock Text="Cidade" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtCidade" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" Text="ARIQUEMES"/>
+                <TextBox x:Name="txtCidade" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
             </StackPanel>
 
             <!-- Estado -->
             <StackPanel Grid.Column="3" Margin="5">
                 <TextBlock Text="Estado" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtEstado" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" Text="RO"/>
+                <TextBox x:Name="txtEstado" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
             </StackPanel>
 
             <!-- CEP -->
             <StackPanel Grid.Column="4" Margin="5">
                 <TextBlock Text="CEP" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtCEP" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1"/>
+                <TextBox x:Name="txtCEP" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
             </StackPanel>
 
             <!-- Condição de pagamento -->
@@ -216,37 +216,37 @@
             <!-- Data -->
             <StackPanel Grid.Column="0" Margin="5">
                 <TextBlock Text="Data" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtData" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1"/>
+                <TextBox x:Name="txtData" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
             </StackPanel>
 
             <!-- Hora/KM -->
             <StackPanel Grid.Column="1" Margin="5">
                 <TextBlock Text="Hora/KM" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtHoraKm" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1"/>
+                <TextBox x:Name="txtHoraKm" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
             </StackPanel>
 
             <!-- Veículo -->
             <StackPanel Grid.Column="2" Margin="5">
                 <TextBlock Text="Veículo" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtVeiculo" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1"/>
+                <TextBox x:Name="txtVeiculo" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
             </StackPanel>
 
             <!-- Modelo -->
             <StackPanel Grid.Column="3" Margin="5">
                 <TextBlock Text="Modelo" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtModelo" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1"/>
+                <TextBox x:Name="txtModelo" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
             </StackPanel>
 
             <!-- Marca -->
             <StackPanel Grid.Column="4" Margin="5">
                 <TextBlock Text="Marca" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtMarca" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1"/>
+                <TextBox x:Name="txtMarca" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
             </StackPanel>
 
             <!-- Patrimônio/Placa -->
             <StackPanel Grid.Column="5" Margin="5">
                 <TextBlock Text="Patrimônio/Placa" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtPatrimonioPlaca" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1"/>
+                <TextBox x:Name="txtPatrimonioPlaca" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
             </StackPanel>
         </Grid>
 
@@ -264,7 +264,7 @@
             <!-- Transportadora -->
             <StackPanel Grid.Column="0" Margin="5">
                 <TextBlock Text="Transportadora" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtTransportadora" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1"/>
+                <TextBox x:Name="txtTransportadora" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
             </StackPanel>
 
             <!-- Tipo de frete -->
@@ -279,227 +279,237 @@
             <!-- Número do Documento -->
             <StackPanel Grid.Column="2" Margin="5">
                 <TextBlock Text="Nº Documento" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtNumeroDocumento" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1"/>
+                <TextBox x:Name="txtNumeroDocumento" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
             </StackPanel>
 
             <!-- Validade -->
             <StackPanel Grid.Column="3" Margin="5">
                 <TextBlock Text="Validade" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtValidade" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1"/>
+                <TextBox x:Name="txtValidade" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
             </StackPanel>
 
             <!-- Emissão -->
             <StackPanel Grid.Column="4" Margin="5">
                 <TextBlock Text="Emissão" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtEmissao" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1"/>
+                <TextBox x:Name="txtEmissao" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
             </StackPanel>
 
             <!-- Condição pagamento -->
             <StackPanel Grid.Column="5" Margin="5">
                 <TextBlock Text="Cond. Pagamento" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtCondicaoPagamento" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1"/>
+                <TextBox x:Name="txtCondicaoPagamento" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
             </StackPanel>
         </Grid>
 
-        <!-- Área de itens expandida -->
-        <Grid Grid.Row="6" Grid.Column="0" Margin="0,5,0,0">
+        <!-- Área principal -->
+        <Grid Grid.Row="6" Grid.ColumnSpan="2" Margin="0,5,0,0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <!-- Coluna 0: Largura automática -->
-                <ColumnDefinition Width="Auto"/>
-                <!-- Coluna 1: Botões com largura automática -->
-                <ColumnDefinition Width="Auto"/>
-                <!-- Coluna 2: Largura automática -->
                 <ColumnDefinition Width="*"/>
-                <!-- Coluna 3: Espaço vazio à direita -->
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
-            <!-- Área de itens expandida -->
-            <Grid Grid.Row="6" Grid.Column="0" Margin="0,5,0,0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+            <!-- Lista de Itens Disponíveis -->
+            <GroupBox Header="📦 Itens Disponíveis" Grid.Column="0" Margin="5,3,5,3" BorderBrush="#E0E0E0" BorderThickness="1">
+                <GroupBox.Style>
+                    <Style TargetType="GroupBox">
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="BorderBrush" Value="#E0E0E0"/>
+                        <Setter Property="BorderThickness" Value="1"/>
+                    </Style>
+                </GroupBox.Style>
 
-                <!-- Lista de Itens Disponíveis -->
-                <GroupBox Header="📦 Itens Disponíveis" Grid.Column="0" Margin="5,3,0,3" BorderBrush="#E0E0E0" BorderThickness="1" Width="400">
-                    <GroupBox.Style>
-                        <Style TargetType="GroupBox">
-                            <Setter Property="Background" Value="White"/>
-                            <Setter Property="BorderBrush" Value="#E0E0E0"/>
-                            <Setter Property="BorderThickness" Value="1"/>
-                        </Style>
-                    </GroupBox.Style>
-
-                    <StackPanel Margin="1">
-                        <!-- Lista com cabeçalho -->
-                        <Border BorderBrush="#E0E0E0" BorderThickness="1" Background="White">
-                            <ListView x:Name="lstDisponiveis" Height="180" 
-          BorderThickness="0" FontSize="11"
-          ScrollViewer.VerticalScrollBarVisibility="Auto"
-          Margin="0">
-                                <ListView.View>
-                                    <GridView>
-                                        <GridViewColumn Header="Item" DisplayMemberBinding="{Binding Item}" Width="160"/>
-                                        <GridViewColumn Header="Código" DisplayMemberBinding="{Binding Codigo}" Width="60"/>
-                                        <GridViewColumn Header="Estoque" DisplayMemberBinding="{Binding Quantidade}" Width="55"/>
-                                        <GridViewColumn Header="Un" DisplayMemberBinding="{Binding Unidade}" Width="30"/>
-                                        <GridViewColumn Header="Preço" DisplayMemberBinding="{Binding Preco}" Width="60"/>
-                                    </GridView>
-                                </ListView.View>
-                                <ListView.ItemContainerStyle>
-                                    <Style TargetType="ListViewItem">
-                                        <Setter Property="BorderThickness" Value="0,0,0,1"/>
-                                        <Setter Property="BorderBrush" Value="#F5F5F5"/>
-                                        <Setter Property="Padding" Value="4,2"/>
-                                        <Setter Property="Height" Value="24"/>
-                                        <Style.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Background" Value="#F8F9FA"/>
-                                            </Trigger>
-                                            <Trigger Property="IsSelected" Value="True">
-                                                <Setter Property="Background" Value="#E3F2FD"/>
-                                                <Setter Property="BorderBrush" Value="#2196F3"/>
-                                            </Trigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </ListView.ItemContainerStyle>
-                            </ListView>
-                        </Border>
-                    </StackPanel>
-                </GroupBox>
-
-                <!-- Botões de ação -->
-                <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="5,0">
-                    <Button Content="➡" Width="35" Height="35" Margin="2" Click="BtnAdd_Click"
-ToolTip="Adicionar item selecionado" 
-Background="#4CAF50" Foreground="White" FontWeight="Bold" FontSize="12"
-BorderThickness="1" BorderBrush="#388E3C"/>
-                    <Button Content="⬅" Width="35" Height="35" Margin="2" Click="BtnRemover_Click"
-ToolTip="Remover item selecionado" 
-Background="#F44336" Foreground="White" FontWeight="Bold" FontSize="12"
-BorderThickness="1" BorderBrush="#D32F2F"/>
+                <StackPanel Margin="1">
+                    <Border BorderBrush="#E0E0E0" BorderThickness="1" Background="White">
+                        <ListView x:Name="lstDisponiveis" Height="200" 
+                                  BorderThickness="0" FontSize="11"
+                                  ScrollViewer.VerticalScrollBarVisibility="Auto"
+                                  Margin="0">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="Item" DisplayMemberBinding="{Binding Item}" Width="180"/>
+                                    <GridViewColumn Header="Código" DisplayMemberBinding="{Binding Codigo}" Width="80"/>
+                                    <GridViewColumn Header="Estoque" DisplayMemberBinding="{Binding Quantidade}" Width="70"/>
+                                    <GridViewColumn Header="Un" DisplayMemberBinding="{Binding Unidade}" Width="40"/>
+                                    <GridViewColumn Header="Preço" DisplayMemberBinding="{Binding Preco}" Width="80"/>
+                                </GridView>
+                            </ListView.View>
+                            <ListView.ItemContainerStyle>
+                                <Style TargetType="ListViewItem">
+                                    <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                                    <Setter Property="BorderBrush" Value="#F5F5F5"/>
+                                    <Setter Property="Padding" Value="4,2"/>
+                                    <Setter Property="Height" Value="24"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#F8F9FA"/>
+                                        </Trigger>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter Property="Background" Value="#E3F2FD"/>
+                                            <Setter Property="BorderBrush" Value="#2196F3"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </ListView.ItemContainerStyle>
+                        </ListView>
+                    </Border>
                 </StackPanel>
+            </GroupBox>
 
-                <!-- Lista de Itens da OS -->
-                <GroupBox Header="📋 Itens na Ordem de Serviço" Grid.Column="2" Margin="5,3,0,3" BorderBrush="#E0E0E0" BorderThickness="1" Width="400">
-                    <GroupBox.Style>
-                        <Style TargetType="GroupBox">
-                            <Setter Property="Background" Value="White"/>
-                            <Setter Property="BorderBrush" Value="#E0E0E0"/>
-                            <Setter Property="BorderThickness" Value="1"/>
-                        </Style>
-                    </GroupBox.Style>
+            <!-- Botões de ação -->
+            <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="5,0">
+                <Button Content="➡" Width="35" Height="35" Margin="2" Click="BtnAdd_Click"
+                        ToolTip="Adicionar item selecionado" 
+                        Background="#4CAF50" Foreground="White" FontWeight="Bold" FontSize="12"
+                        BorderThickness="1" BorderBrush="#388E3C"/>
+                <Button Content="⬅" Width="35" Height="35" Margin="2" Click="BtnRemover_Click"
+                        ToolTip="Remover item selecionado" 
+                        Background="#F44336" Foreground="White" FontWeight="Bold" FontSize="12"
+                        BorderThickness="1" BorderBrush="#D32F2F"/>
+            </StackPanel>
 
-                    <StackPanel Margin="1">
-                        <!-- Lista de itens selecionados -->
-                        <Border BorderBrush="#E0E0E0" BorderThickness="1" Background="White" Margin="0,0,0,3">
-                            <ListView x:Name="lstSelecionados" Height="180"
-          BorderThickness="0" FontSize="11"
-          ScrollViewer.VerticalScrollBarVisibility="Auto"
-          Margin="0">
-                                <ListView.View>
-                                    <GridView>
-                                        <GridViewColumn Header="Item" DisplayMemberBinding="{Binding Item}" Width="140"/>
-                                        <GridViewColumn Header="Qtd" DisplayMemberBinding="{Binding Quantidade}" Width="35"/>
-                                        <GridViewColumn Header="Un" DisplayMemberBinding="{Binding Unidade}" Width="25"/>
-                                        <GridViewColumn Header="Preço" DisplayMemberBinding="{Binding Preco}" Width="50"/>
-                                        <GridViewColumn Header="Desc." DisplayMemberBinding="{Binding Desconto}" Width="40"/>
-                                        <GridViewColumn Header="Total" DisplayMemberBinding="{Binding Total}" Width="55"/>
-                                    </GridView>
-                                </ListView.View>
-                                <ListView.ItemContainerStyle>
-                                    <Style TargetType="ListViewItem">
-                                        <Setter Property="BorderThickness" Value="0,0,0,1"/>
-                                        <Setter Property="BorderBrush" Value="#F5F5F5"/>
-                                        <Setter Property="Padding" Value="4,2"/>
-                                        <Setter Property="Height" Value="24"/>
-                                        <Setter Property="Background" Value="#FAFAFA"/>
-                                        <Style.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Background" Value="#F0F4FF"/>
-                                            </Trigger>
-                                            <Trigger Property="IsSelected" Value="True">
-                                                <Setter Property="Background" Value="#FFEBEE"/>
-                                                <Setter Property="BorderBrush" Value="#F44336"/>
-                                            </Trigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </ListView.ItemContainerStyle>
-                            </ListView>
-                        </Border>
+            <!-- Lista de Itens da OS -->
+            <GroupBox Header="📋 Itens na OS" Grid.Column="2" Margin="5,3,5,3" BorderBrush="#E0E0E0" BorderThickness="1">
+                <GroupBox.Style>
+                    <Style TargetType="GroupBox">
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="BorderBrush" Value="#E0E0E0"/>
+                        <Setter Property="BorderThickness" Value="1"/>
+                    </Style>
+                </GroupBox.Style>
 
-                        <!-- Total -->
-                        <Border Background="White" BorderBrush="#E0E0E0" BorderThickness="1" Padding="4">
-                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                                <TextBlock Text="💰 Total da OS:" FontWeight="SemiBold" Margin="0,0,4,0" FontSize="10" VerticalAlignment="Center"/>
-                                <Border Background="#FFF3E0" BorderBrush="#FF9800" BorderThickness="1" Padding="3,1">
-                                    <TextBlock x:Name="txtTotalOS" Text="R$ 0,00" FontWeight="Bold" Foreground="#E65100" FontSize="11"/>
-                                </Border>
-                            </StackPanel>
-                        </Border>
-                    </StackPanel>
-                </GroupBox>
+                <StackPanel Margin="1">
+                    <Border BorderBrush="#E0E0E0" BorderThickness="1" Background="White" Margin="0,0,0,3">
+                        <ListView x:Name="lstSelecionados" Height="200"
+                                  BorderThickness="0" FontSize="11"
+                                  ScrollViewer.VerticalScrollBarVisibility="Auto"
+                                  Margin="0">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="Item" DisplayMemberBinding="{Binding Item}" Width="160"/>
+                                    <GridViewColumn Header="Qtd" DisplayMemberBinding="{Binding Quantidade}" Width="45"/>
+                                    <GridViewColumn Header="Un" DisplayMemberBinding="{Binding Unidade}" Width="35"/>
+                                    <GridViewColumn Header="Preço" DisplayMemberBinding="{Binding Preco}" Width="70"/>
+                                    <GridViewColumn Header="Desc." DisplayMemberBinding="{Binding Desconto}" Width="50"/>
+                                    <GridViewColumn Header="Total" DisplayMemberBinding="{Binding Total}" Width="70"/>
+                                </GridView>
+                            </ListView.View>
+                            <ListView.ItemContainerStyle>
+                                <Style TargetType="ListViewItem">
+                                    <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                                    <Setter Property="BorderBrush" Value="#F5F5F5"/>
+                                    <Setter Property="Padding" Value="4,2"/>
+                                    <Setter Property="Height" Value="24"/>
+                                    <Setter Property="Background" Value="#FAFAFA"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#F0F4FF"/>
+                                        </Trigger>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter Property="Background" Value="#FFEBEE"/>
+                                            <Setter Property="BorderBrush" Value="#F44336"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </ListView.ItemContainerStyle>
+                        </ListView>
+                    </Border>
 
-                <!-- Campos de Deslocamento -->
-                <GroupBox Header="🚗 Deslocamento" Grid.Column="3" Margin="5,3,5,3" BorderBrush="#E0E0E0" BorderThickness="1" Width="300" HorizontalAlignment="Left">
-                    <GroupBox.Style>
-                        <Style TargetType="GroupBox">
-                            <Setter Property="Background" Value="White"/>
-                            <Setter Property="BorderBrush" Value="#E0E0E0"/>
-                            <Setter Property="BorderThickness" Value="1"/>
-                        </Style>
-                    </GroupBox.Style>
-
-                    <StackPanel Margin="8" Orientation="Vertical">
-                        <!-- KM Percorridos -->
-                        <StackPanel Margin="0,0,0,8">
-                            <TextBlock Text="KM Percorridos:" FontSize="11" FontWeight="SemiBold" Margin="0,0,0,4"/>
-                            <TextBox x:Name="txtKmPercorridos" Padding="6" FontSize="11" 
-                         Text="0" TextChanged="TxtKmPercorridos_TextChanged"
-                         Background="#F8F9FA" BorderBrush="#DEE2E6" BorderThickness="1"/>
-                        </StackPanel>
-
-                        <!-- Valor por KM -->
-                        <StackPanel Margin="0,0,0,8">
-                            <TextBlock Text="Valor por KM:" FontSize="11" FontWeight="SemiBold" Margin="0,0,0,4"/>
-                            <TextBox x:Name="txtValorPorKm" Padding="6" FontSize="11" 
-                         Text="0,00" TextChanged="TxtValorPorKm_TextChanged"
-                         Background="#F8F9FA" BorderBrush="#DEE2E6" BorderThickness="1"/>
-                        </StackPanel>
-
-                        <!-- Valor do Deslocamento -->
-                        <StackPanel Margin="0,0,0,0">
-                            <TextBlock Text="Valor do Deslocamento:" FontSize="11" FontWeight="SemiBold" Margin="0,0,0,4"/>
-                            <Border Background="#FFF3E0" BorderBrush="#FF9800" BorderThickness="1" Padding="8,4">
-                                <TextBlock x:Name="txtValorDeslocamento" Text="R$ 0,00" FontSize="12" FontWeight="Bold" 
-                               Foreground="#E65100" HorizontalAlignment="Center"/>
+                    <!-- Total -->
+                    <Border Background="White" BorderBrush="#E0E0E0" BorderThickness="1" Padding="4">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                            <TextBlock Text="💰 Total:" FontWeight="SemiBold" Margin="0,0,4,0" FontSize="10" VerticalAlignment="Center"/>
+                            <Border Background="#FFF3E0" BorderBrush="#FF9800" BorderThickness="1" Padding="3,1">
+                                <TextBlock x:Name="txtTotalOS" Text="R$ 0,00" FontWeight="Bold" Foreground="#E65100" FontSize="11"/>
                             </Border>
                         </StackPanel>
+                    </Border>
+                </StackPanel>
+            </GroupBox>
 
-                        <!-- Informação adicional -->
-                        <TextBlock Text="" 
-                       FontSize="9" Foreground="Gray" FontStyle="Italic" 
-                       Margin="0,8,0,0" TextWrapping="Wrap"/>
+            <!-- Custos Adicionais -->
+            <GroupBox Header="💰 Custos Adicionais" Grid.Column="3" Margin="5,3,10,3" BorderBrush="#E0E0E0" BorderThickness="1">
+                <GroupBox.Style>
+                    <Style TargetType="GroupBox">
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="BorderBrush" Value="#E0E0E0"/>
+                        <Setter Property="BorderThickness" Value="1"/>
+                    </Style>
+                </GroupBox.Style>
+
+                <Grid Margin="6" Width="180">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- KM Percorridos -->
+                    <StackPanel Grid.Row="0" Margin="0,0,0,6">
+                        <TextBlock Text="KM Percorridos" FontSize="10" FontWeight="SemiBold" Margin="0,0,0,2" Foreground="#555"/>
+                        <TextBox x:Name="txtKmPercorridos" Padding="4" FontSize="10" 
+                                 Text="0" TextChanged="TxtKmPercorridos_TextChanged" PreviewKeyDown="TextBox_KeyDown"
+                                 Background="#F8F9FA" BorderBrush="#DEE2E6" BorderThickness="1"/>
                     </StackPanel>
-                </GroupBox>
-            </Grid>
-        </Grid>
-        <!-- Vendedor e Observações à direita -->
-        <StackPanel Grid.Row="6" Grid.Column="1" Margin="10,0,0,0" VerticalAlignment="Top">
-            <!-- Vendedor -->
-            <GroupBox Header="Vendedor" Margin="0,0,0,10">
-                <TextBox x:Name="txtVendedor" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" Width="200"/>
+
+                    <!-- Valor por KM -->
+                    <StackPanel Grid.Row="1" Margin="0,0,0,6">
+                        <TextBlock Text="Valor por KM" FontSize="10" FontWeight="SemiBold" Margin="0,0,0,2" Foreground="#555"/>
+                        <TextBox x:Name="txtValorPorKm" Padding="4" FontSize="10" 
+                                 Text="0,00" TextChanged="TxtValorPorKm_TextChanged" PreviewKeyDown="TextBox_KeyDown"
+                                 Background="#F8F9FA" BorderBrush="#DEE2E6" BorderThickness="1"/>
+                    </StackPanel>
+
+                    <!-- Valor do Deslocamento -->
+                    <StackPanel Grid.Row="2" Margin="0,0,0,6">
+                        <TextBlock Text="Valor do Deslocamento" FontSize="10" FontWeight="SemiBold" Margin="0,0,0,2" Foreground="#555"/>
+                        <Border Background="#FFF3E0" BorderBrush="#FFB74D" BorderThickness="1" Padding="6,4" CornerRadius="2">
+                            <TextBlock x:Name="txtValorDeslocamento" Text="R$ 0,00" FontSize="11" FontWeight="Bold" 
+                                       Foreground="#E65100" HorizontalAlignment="Center"/>
+                        </Border>
+                    </StackPanel>
+
+                    <!-- Mão de Obra -->
+                    <StackPanel Grid.Row="3" Margin="0,0,0,8">
+                        <TextBlock Text="Valor da Mão de Obra" FontSize="10" FontWeight="SemiBold" Margin="0,0,0,2" Foreground="#555"/>
+                        <TextBox x:Name="txtMaoDeObra" Padding="4" FontSize="10" 
+                                 Text="0,00" TextChanged="TxtMaoDeObra_TextChanged" PreviewKeyDown="TextBox_KeyDown"
+                                 Background="#F8F9FA" BorderBrush="#DEE2E6" BorderThickness="1"/>
+                    </StackPanel>
+
+                    <!-- Total Custos -->
+                    <StackPanel Grid.Row="4">
+                        <TextBlock Text="Total de Custos" FontSize="10" FontWeight="SemiBold" Margin="0,0,0,2" Foreground="#555"/>
+                        <Border Background="#E8F5E8" BorderBrush="#4CAF50" BorderThickness="1" Padding="6,4" CornerRadius="2">
+                            <TextBlock x:Name="txtTotalCustosAdicionais" 
+                                       Text="R$ 0,00" 
+                                       FontSize="11" 
+                                       FontWeight="Bold" 
+                                       Foreground="#2E7D32"
+                                       HorizontalAlignment="Center"/>
+                        </Border>
+                    </StackPanel>
+                </Grid>
             </GroupBox>
 
-            <!-- Observações -->
-            <GroupBox Header="Observações">
-                <TextBox x:Name="txtObservacoes" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" 
-                         Height="120" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"/>
-            </GroupBox>
-        </StackPanel>
+            <!-- Vendedor e Observações -->
+            <StackPanel Grid.Column="4" Margin="5,3,0,3" VerticalAlignment="Top">
+                <!-- Vendedor -->
+                <GroupBox Header="Vendedor" Margin="0,0,0,10" Width="180">
+                    <TextBox x:Name="txtVendedor" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
+                </GroupBox>
+
+                <!-- Observações -->
+                <GroupBox Header="Observações" Width="180">
+                    <TextBox x:Name="txtObservacoes" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" 
+                             Height="120" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" PreviewKeyDown="TextBox_KeyDown"/>
+                </GroupBox>
+            </StackPanel>
+        </Grid>
 
         <!-- Rodapé com botões de ação -->
         <Grid Grid.Row="7" Grid.ColumnSpan="2" Margin="0,15,0,0">

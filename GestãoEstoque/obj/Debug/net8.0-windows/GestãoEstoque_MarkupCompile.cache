@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\Neto\Documents\C# projetos\GestãoEstoque\GestãoEstoque\App.xaml
-6-1663692342
+8-1786028628
 
-15-1170754925
-2021402806292
-MainWindow.xaml;TelasOrganização\CadastrarItem.xaml;TelasOrganização\EditarItem.xaml;TelasOrganização\EmitirOS.xaml;TelasOrganização\RelatorioVisualizador.xaml;TelasOrganização\SolicitarQuantidade.xaml;
+21-503135260
+203-1801850141
+MainWindow.xaml;TelasOrganização\CadastrarItem.xaml;TelasOrganização\CriarOrcamento.xaml;TelasOrganização\EditarItem.xaml;TelasOrganização\EmitirOS.xaml;TelasOrganização\RelatorioVisualizador.xaml;TelasOrganização\SolicitarQuantidade.xaml;TelasOrganização\SolicitarQuantidadeOrcamento.xaml;
 
 False
 

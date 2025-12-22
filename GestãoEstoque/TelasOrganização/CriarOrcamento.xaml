@@ -1,0 +1,245 @@
+﻿<Window x:Class="GestãoEstoque.CriarOrcamento"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Criar Orçamento" Height="750" Width="1200"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Cabeçalho -->
+        <Border Grid.Row="0" Background="#2196F3" Padding="15" Margin="0,0,0,10">
+            <StackPanel>
+                <TextBlock Text="📋 CRIAR ORÇAMENTO" FontSize="16" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center"/>
+                <TextBlock x:Name="txtNumeroOrcamento" Text="Número: ORC_000000" FontSize="12" Foreground="White" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Dados do Cliente -->
+        <GroupBox Grid.Row="1" Header="👤 Dados do Cliente" Margin="0,0,0,10" BorderBrush="#E0E0E0" BorderThickness="1">
+            <GroupBox.Style>
+                <Style TargetType="GroupBox">
+                    <Setter Property="Background" Value="White"/>
+                    <Setter Property="BorderBrush" Value="#E0E0E0"/>
+                    <Setter Property="BorderThickness" Value="1"/>
+                </Style>
+            </GroupBox.Style>
+
+            <StackPanel Orientation="Vertical" Margin="8">
+                <TextBlock Text="Nome do Cliente *" FontWeight="SemiBold" Margin="0,0,0,5" Foreground="#333"/>
+                <TextBox x:Name="txtCliente" Width="400" HorizontalAlignment="Left" 
+                         Padding="8" FontSize="12" Background="#F8F9FA" BorderBrush="#DEE2E6" BorderThickness="1"
+                         ToolTip="Digite o nome do cliente"
+                         Text="{Binding ClienteNome, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBlock Text="* Campo obrigatório" FontSize="10" Foreground="Gray" FontStyle="Italic" Margin="0,5,0,0"/>
+            </StackPanel>
+        </GroupBox>
+
+        <!-- Conteúdo - Copiado do EmitirOS.xaml -->
+        <Grid Grid.Row="2" Margin="0,5,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Lista de Itens Disponíveis -->
+            <GroupBox Header="📦 Itens Disponíveis" Grid.Column="0" Margin="5,3,0,3" BorderBrush="#E0E0E0" BorderThickness="1" Width="400">
+                <GroupBox.Style>
+                    <Style TargetType="GroupBox">
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="BorderBrush" Value="#E0E0E0"/>
+                        <Setter Property="BorderThickness" Value="1"/>
+                    </Style>
+                </GroupBox.Style>
+
+                <StackPanel Margin="1">
+                    <!-- Lista com cabeçalho -->
+                    <Border BorderBrush="#E0E0E0" BorderThickness="1" Background="White">
+                        <ListView x:Name="lstDisponiveis" Height="180" 
+                                  BorderThickness="0" FontSize="11"
+                                  ScrollViewer.VerticalScrollBarVisibility="Auto"
+                                  Margin="0">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="Item" DisplayMemberBinding="{Binding Item}" Width="160"/>
+                                    <GridViewColumn Header="Código" DisplayMemberBinding="{Binding Codigo}" Width="60"/>
+                                    <GridViewColumn Header="Estoque" DisplayMemberBinding="{Binding Quantidade}" Width="55"/>
+                                    <GridViewColumn Header="Un" DisplayMemberBinding="{Binding Unidade}" Width="30"/>
+                                    <GridViewColumn Header="Preço" DisplayMemberBinding="{Binding Preco}" Width="60"/>
+                                </GridView>
+                            </ListView.View>
+                            <ListView.ItemContainerStyle>
+                                <Style TargetType="ListViewItem">
+                                    <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                                    <Setter Property="BorderBrush" Value="#F5F5F5"/>
+                                    <Setter Property="Padding" Value="4,2"/>
+                                    <Setter Property="Height" Value="24"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#F8F9FA"/>
+                                        </Trigger>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter Property="Background" Value="#2196F3"/>
+                                            <Setter Property="Foreground" Value="White"/>
+                                            <Setter Property="BorderBrush" Value="#1976D2"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </ListView.ItemContainerStyle>
+                        </ListView>
+                    </Border>
+                </StackPanel>
+            </GroupBox>
+
+            <!-- Botões de ação -->
+            <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="5,0">
+                <Button x:Name="btnAdd" Content="➡" Width="35" Height="35" Margin="2" Click="BtnAdd_Click"
+                        ToolTip="Adicionar item selecionado" 
+                        Background="#4CAF50" Foreground="White" FontWeight="Bold" FontSize="12"
+                        BorderThickness="1" BorderBrush="#388E3C"/>
+                <Button x:Name="btnRemover" Content="⬅" Width="35" Height="35" Margin="2" Click="BtnRemover_Click"
+                        ToolTip="Remover item selecionado" 
+                        Background="#F44336" Foreground="White" FontWeight="Bold" FontSize="12"
+                        BorderThickness="1" BorderBrush="#D32F2F"/>
+            </StackPanel>
+
+            <!-- Lista de Itens da OS -->
+            <GroupBox Header="📋 Itens no Orçamento" Grid.Column="2" Margin="5,3,0,3" BorderBrush="#E0E0E0" BorderThickness="1" Width="400">
+                <GroupBox.Style>
+                    <Style TargetType="GroupBox">
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="BorderBrush" Value="#E0E0E0"/>
+                        <Setter Property="BorderThickness" Value="1"/>
+                    </Style>
+                </GroupBox.Style>
+
+                <StackPanel Margin="1">
+                    <!-- Lista de itens selecionados -->
+                    <Border BorderBrush="#E0E0E0" BorderThickness="1" Background="White" Margin="0,0,0,3">
+                        <ListView x:Name="lstSelecionados" Height="180"
+                                  BorderThickness="0" FontSize="11"
+                                  ScrollViewer.VerticalScrollBarVisibility="Auto"
+                                  Margin="0">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="Item" DisplayMemberBinding="{Binding Item}" Width="140"/>
+                                    <GridViewColumn Header="Qtd" DisplayMemberBinding="{Binding Quantidade}" Width="35"/>
+                                    <GridViewColumn Header="Un" DisplayMemberBinding="{Binding Unidade}" Width="25"/>
+                                    <GridViewColumn Header="Preço" DisplayMemberBinding="{Binding Preco}" Width="50"/>
+                                    <GridViewColumn Header="Desc." DisplayMemberBinding="{Binding Desconto}" Width="40"/>
+                                    <GridViewColumn Header="Total" DisplayMemberBinding="{Binding Total}" Width="55"/>
+                                </GridView>
+                            </ListView.View>
+                            <ListView.ItemContainerStyle>
+                                <Style TargetType="ListViewItem">
+                                    <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                                    <Setter Property="BorderBrush" Value="#F5F5F5"/>
+                                    <Setter Property="Padding" Value="4,2"/>
+                                    <Setter Property="Height" Value="24"/>
+                                    <Setter Property="Background" Value="#FAFAFA"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#F0F4FF"/>
+                                        </Trigger>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter Property="Background" Value="#FF5722"/>
+                                            <Setter Property="Foreground" Value="White"/>
+                                            <Setter Property="BorderBrush" Value="#E64A19"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </ListView.ItemContainerStyle>
+                        </ListView>
+                    </Border>
+
+                    <!-- Total -->
+                    <Border Background="White" BorderBrush="#E0E0E0" BorderThickness="1" Padding="4">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                            <TextBlock Text="💰 Total do Orçamento:" FontWeight="SemiBold" Margin="0,0,4,0" FontSize="10" VerticalAlignment="Center"/>
+                            <Border Background="#FFF3E0" BorderBrush="#FF9800" BorderThickness="1" Padding="3,1">
+                                <TextBlock x:Name="txtTotalOS" Text="R$ 0,00" FontWeight="Bold" Foreground="#E65100" FontSize="11"/>
+                            </Border>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </GroupBox>
+
+            <!-- Campos de Custos Adicionais -->
+            <GroupBox Header="💰 Custos Adicionais" Grid.Column="3" Margin="5,3,5,3" BorderBrush="#E0E0E0" BorderThickness="1" Width="300" HorizontalAlignment="Left">
+                <GroupBox.Style>
+                    <Style TargetType="GroupBox">
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="BorderBrush" Value="#E0E0E0"/>
+                        <Setter Property="BorderThickness" Value="1"/>
+                    </Style>
+                </GroupBox.Style>
+
+                <StackPanel Margin="8" Orientation="Vertical">
+                    <!-- KM Percorridos -->
+                    <StackPanel Margin="0,0,0,8">
+                        <TextBlock Text="KM Percorridos:" FontSize="11" FontWeight="SemiBold" Margin="0,0,0,4"/>
+                        <TextBox x:Name="txtKmPercorridos" Padding="6" FontSize="11" 
+                     Text="0" TextChanged="TxtKmPercorridos_TextChanged"
+                     Background="#F8F9FA" BorderBrush="#DEE2E6" BorderThickness="1"/>
+                    </StackPanel>
+
+                    <!-- Valor por KM -->
+                    <StackPanel Margin="0,0,0,8">
+                        <TextBlock Text="Valor por KM:" FontSize="11" FontWeight="SemiBold" Margin="0,0,0,4"/>
+                        <TextBox x:Name="txtValorPorKm" Padding="6" FontSize="11" 
+                     Text="0,00" TextChanged="TxtValorPorKm_TextChanged"
+                     Background="#F8F9FA" BorderBrush="#DEE2E6" BorderThickness="1"/>
+                    </StackPanel>
+
+                    <!-- Valor do Deslocamento -->
+                    <StackPanel Margin="0,0,0,8">
+                        <TextBlock Text="Valor do Deslocamento:" FontSize="11" FontWeight="SemiBold" Margin="0,0,0,4"/>
+                        <Border Background="#FFF3E0" BorderBrush="#FF9800" BorderThickness="1" Padding="8,4">
+                            <TextBlock x:Name="txtValorDeslocamento" Text="R$ 0,00" FontSize="12" FontWeight="Bold" 
+                           Foreground="#E65100" HorizontalAlignment="Center"/>
+                        </Border>
+                    </StackPanel>
+
+                    <!-- Mão de Obra -->
+                    <StackPanel Margin="0,0,0,0">
+                        <TextBlock Text="Valor da Mão de Obra:" FontSize="11" FontWeight="SemiBold" Margin="0,0,0,4"/>
+                        <TextBox x:Name="txtMaoDeObra" Padding="6" FontSize="11" 
+                     Text="0,00" TextChanged="TxtMaoDeObra_TextChanged"
+                     Background="#F8F9FA" BorderBrush="#DEE2E6" BorderThickness="1"/>
+                    </StackPanel>
+
+                    <!-- Informação adicional -->
+                    <TextBlock Text="* Os custos adicionais serão somados ao total do orçamento" 
+                   FontSize="9" Foreground="Gray" FontStyle="Italic" 
+                   Margin="0,8,0,0" TextWrapping="Wrap"/>
+                </StackPanel>
+            </GroupBox>
+        </Grid>
+
+        <!-- Botões de ação -->
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+            <Button x:Name="btnCancelar" Content="❌ Cancelar" Click="BtnCancelar_Click" 
+                    Background="#9E9E9E" Foreground="White" FontWeight="SemiBold" 
+                    Padding="15,8" Margin="0,0,10,0"/>
+
+            <Button x:Name="btnSalvarOrcamento" Content="💾 Salvar Orçamento" Click="BtnSalvarOrcamento_Click" 
+                    Background="#FF9800" Foreground="White" FontWeight="SemiBold" 
+                    Padding="15,8" Margin="0,0,10,0"/>
+
+            <Button x:Name="btnGerarPDF" Content="📄 Gerar PDF" Click="BtnGerarPDF_Click" 
+                    Background="#2196F3" Foreground="White" FontWeight="SemiBold" 
+                    Padding="15,8" Margin="0,0,10,0"/>
+
+            <Button x:Name="btnConverterOS" Content="🔄 Converter para OS" Click="BtnConverterOS_Click" 
+                    Background="#4CAF50" Foreground="White" FontWeight="Bold" 
+                    Padding="15,8"/>
+        </StackPanel>
+    </Grid>
+</Window>
