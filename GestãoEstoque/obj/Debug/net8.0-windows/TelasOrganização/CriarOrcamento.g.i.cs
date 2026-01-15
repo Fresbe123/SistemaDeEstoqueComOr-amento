@@ -172,7 +172,7 @@ namespace GestãoEstoque {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/GestãoEstoque;component/telasorganiza%c3%a7%c3%a3o/criarorcamento.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/GestãoEstoque;V1.0.0.0;component/telasorganiza%c3%a7%c3%a3o/criarorcamento.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\TelasOrganização\CriarOrcamento.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

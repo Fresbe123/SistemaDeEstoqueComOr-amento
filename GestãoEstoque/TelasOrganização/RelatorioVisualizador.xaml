@@ -1,32 +1,89 @@
 ﻿<Window x:Class="GestãoEstoque.RelatorioVisualizador"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Relatórios de OS e Orçamentos" Height="450" Width="800">
+        Title="Relatórios de OS e Orçamentos" Height="500" Width="1000">
     <Grid Margin="10">
-        <DataGrid x:Name="dgRelatorios" AutoGenerateColumns="False" IsReadOnly="True"
-                  MouseDoubleClick="dgRelatorios_MouseDoubleClick" SelectionMode="Single">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Cabeçalho simplificado -->
+        <Border Grid.Row="0" Background="#2196F3" CornerRadius="4" Margin="0,0,0,10" Padding="12">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Título -->
+                <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
+                    <TextBlock Text="📊" FontSize="18" Margin="0,0,8,0"/>
+                    <TextBlock Text="Relatórios de OS e Orçamentos" 
+                               Foreground="White" 
+                               FontSize="16" 
+                               FontWeight="Bold"/>
+                </StackPanel>
+
+                <!-- Contadores SIMPLES -->
+                <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center">
+                    <!-- Contador de OS -->
+                    <Border Background="#4CAF50" CornerRadius="3" Padding="10,6" Margin="0,0,10,0">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="📋 OS: " Foreground="White" FontWeight="SemiBold" FontSize="13"/>
+                            <TextBlock x:Name="txtContadorOS" Text="0" Foreground="White" FontWeight="Bold" FontSize="13"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Contador de Orçamentos -->
+                    <Border Background="#FF9800" CornerRadius="3" Padding="10,6">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="💰 Orçamentos: " Foreground="White" FontWeight="SemiBold" FontSize="13"/>
+                            <TextBlock x:Name="txtContadorOrcamentos" Text="0" Foreground="White" FontWeight="Bold" FontSize="13"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- DataGrid -->
+        <DataGrid x:Name="dgRelatorios" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True"
+                  MouseDoubleClick="dgRelatorios_MouseDoubleClick" SelectionMode="Extended">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
-                <DataGridTextColumn Header="Cliente" Binding="{Binding Cliente}" Width="*"/>
-                <DataGridTextColumn Header="Data" Binding="{Binding Data}" Width="140"/>
+                <DataGridTextColumn Header="Tipo" Binding="{Binding Tipo}" Width="80"/>
+                <DataGridTextColumn Header="Número" Binding="{Binding NumeroFormatado}" Width="100"/>
+                <DataGridTextColumn Header="Cliente" Binding="{Binding Cliente}" Width="*" MinWidth="200"/>
+                <DataGridTextColumn Header="Data" Binding="{Binding Data}" Width="100"/>
                 <DataGridTextColumn Header="Total" Width="120">
                     <DataGridTextColumn.Binding>
-                        <Binding Path="ValorTotal" StringFormat="N2"/>
+                        <Binding Path="ValorTotal" StringFormat="R$ {0:N2}"/>
                     </DataGridTextColumn.Binding>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Tipo" Binding="{Binding Tipo}" Width="100"/>
                 <DataGridTextColumn Header="Arquivo" Binding="{Binding CaminhoArquivo}" Width="250"/>
             </DataGrid.Columns>
         </DataGrid>
 
         <!-- Botões embaixo -->
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,10,0,0">
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,10,0,0">
             <Button Content="Abrir" Click="BtnAbrirClick" Width="80" Margin="5"/>
             <Button Content="Ver OS" Click="BtnVerOS_Click" Width="80" Margin="5"/>
             <Button Content="Ver Orçamentos" Click="BtnVerOrcamentos_Click" Width="120" Margin="5"/>
             <Button Content="Ver Todos" Click="BtnVerTodos_Click" Width="80" Margin="5"/>
             <Button Content="Gerar OS" Click="BtnGerarOS_Click" Width="80" Margin="5" Background="Green" Foreground="White"/>
-            <Button Content="Exportar (CSV)" Click="BtnExportarCSV_Click" Width="120" Margin="5"/>
+            <Button Content="Exportar CSV" Click="BtnExportarCSV_Click" Width="100" Margin="5"/>
+            <Button Content="🔧 Corrigir Números" Click="BtnCorrigirNumeros_Click" Width="120" Margin="5" Background="#9C27B0" Foreground="White"/>
+            <Button Content="📋 Detalhes" Click="BtnDetalhes_Click" Width="80" Margin="5" Background="#607D8B" Foreground="White"/>
+            <Button Content="🗑️ Deletar" Click="BtnDeletar_Click" Width="80" Margin="5" Background="#F44336" Foreground="White" FontWeight="SemiBold" ToolTip="Deletar OS/Orçamento selecionado"/>
+            <Button Content="🗑️ Deletar Múltiplos" Click="BtnDeletarMultiplos_Click" Width="120" Margin="5" Background="#D32F2F" Foreground="White" FontWeight="SemiBold" ToolTip="Deletar vários itens selecionados"/>
+
+
+            <!-- Adicione este botão TEMPORÁRIO no seu XAML, pode ser no final do StackPanel de botões -->
+            <Button Content="🧨 LIMPAR TUDO" Click="BtnLimparJSONCompleto_Click" Width="120" Margin="5" 
+Background="#D32F2F" Foreground="White" FontWeight="Bold" FontSize="11"
+ToolTip="LIMPEZA COMPLETA - CUIDADO!" BorderBrush="Red" BorderThickness="2"/>
         </StackPanel>
+
     </Grid>
 </Window>

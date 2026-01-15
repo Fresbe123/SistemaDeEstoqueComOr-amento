@@ -14,7 +14,20 @@ namespace GestãoEstoque.ClassesOrganização
         public decimal ValorTotal { get; set; }
         public string CaminhoArquivo { get; set; }
         public string Tipo { get; set; }
+        public int Numero { get; set; }
+        public string NumeroFormatado
+        {
+            get
+            {
+                if (Tipo == "OS")
+                    return $"OS_{Numero:000000}";
+                else if (Tipo == "Orçamento")
+                    return $"ORC_{Numero:000000}";
+                return "";
+            }
+        }
 
+        public string NumeroDocumento { get; set; }
         public string NumeroOrcamento { get; set; }
         public decimal ValorDeslocamento { get; set; }
         public decimal ValorMaoDeObra { get; set; }

@@ -1,0 +1,20 @@
+{
+  "NumeroOrcamento": "OR\u00C7-501",
+  "Cliente": "neto",
+  "Data": "2026-01-13T12:24:46.4661042-03:00",
+  "Itens": [
+    {
+      "Codigo": "1",
+      "Nome": null,
+      "Descricao": "1",
+      "Quantidade": 1.00,
+      "Preco": 1.00,
+      "Desconto": 0
+    }
+  ],
+  "KmPercorridos": 0,
+  "ValorPorKm": 0.00,
+  "ValorDeslocamento": 0,
+  "ValorMaoDeObra": 0.00,
+  "ValorTotal": 1.00
+}

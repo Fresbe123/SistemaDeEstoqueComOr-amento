@@ -16,29 +16,41 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
 
         <!-- Cabeçalho -->
-        <Border Grid.Row="0" Grid.ColumnSpan="2" Background="#D32F2F" CornerRadius="4" Margin="0,0,0,15" Padding="15">
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="📝" FontSize="20" Margin="0,0,10,0"/>
-                <TextBlock Text="Emitir Ordem de Serviço" 
-                           Foreground="White" 
-                           FontSize="18" 
-                           FontWeight="Bold"/>
-            </StackPanel>
+        <Border Grid.Row="0" Background="#D32F2F" CornerRadius="4" Margin="0,0,0,15" Padding="15">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Ícone e Título -->
+                <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
+                    <TextBlock Text="📝" FontSize="20" Margin="0,0,10,0"/>
+                    <TextBlock Text="Emitir Ordem de Serviço" 
+                       Foreground="White" 
+                       FontSize="18" 
+                       FontWeight="Bold"/>
+                </StackPanel>
+
+                <!-- OS Nº alinhado à direita -->
+                <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center">
+                    <TextBlock Text="OS Nº: " Foreground="White" FontWeight="SemiBold" FontSize="12"/>
+                    <TextBlock x:Name="txtNumeroOS" Text="" Foreground="White" FontWeight="Bold" FontSize="13"/>
+                </StackPanel>
+            </Grid>
         </Border>
 
         <!-- Dados do Estabelecimento Emitente -->
-        <GroupBox Grid.Row="1" Grid.ColumnSpan="2" Header="Identificação do Estabelecimento Emitente" Margin="0,0,0,10">
+        <GroupBox Grid.Row="1" Header="Identificação do Estabelecimento Emitente" Margin="0,0,0,10">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -109,200 +121,137 @@
             </Grid>
         </GroupBox>
 
-        <!-- Informações do cliente - Linha 1 -->
-        <Grid Grid.Row="2" Grid.ColumnSpan="2" Margin="0,0,0,10">
+        <!-- Informações do Cliente e Veículo -->
+        <Grid Grid.Row="2" Margin="0,0,0,10">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="1.5*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <!-- Nome do cliente -->
-            <StackPanel Grid.Column="0" Margin="5">
-                <TextBlock Text="Nome do Cliente*" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtCliente" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
-            </StackPanel>
+            <!-- Informações do Cliente -->
+            <GroupBox Grid.Column="0" Header="📋 Informações do Cliente" Margin="5">
+                <Grid Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
 
-            <!-- CPF/CNPJ -->
-            <StackPanel Grid.Column="1" Margin="5">
-                <TextBlock Text="CPF/CNPJ" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtCpfCnpj" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
-            </StackPanel>
+                    <!-- Nome do cliente -->
+                    <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Margin="0,0,0,8">
+                        <TextBlock Text="Nome do Cliente*" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                        <TextBox x:Name="txtCliente" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
+                    </StackPanel>
 
-            <!-- Telefone -->
-            <StackPanel Grid.Column="2" Margin="5">
-                <TextBlock Text="Telefone" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtTelefone" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
-            </StackPanel>
+                    <!-- CPF/CNPJ -->
+                    <StackPanel Grid.Column="0" Grid.Row="1" Margin="0,0,10,8">
+                        <TextBlock Text="CPF/CNPJ" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                        <TextBox x:Name="txtCpfCnpj" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
+                    </StackPanel>
 
-            <!-- Celular -->
-            <StackPanel Grid.Column="3" Margin="5">
-                <TextBlock Text="Celular" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtCelular" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
-            </StackPanel>
+                    <!-- Telefone -->
+                    <StackPanel Grid.Column="1" Grid.Row="1" Margin="0,0,0,8">
+                        <TextBlock Text="Telefone" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                        <TextBox x:Name="txtTelefone" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
+                    </StackPanel>
 
-            <!-- E-mail -->
-            <StackPanel Grid.Column="4" Margin="5">
-                <TextBlock Text="E-mail" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtEmail" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
-            </StackPanel>
+                    <!-- E-mail -->
+                    <StackPanel Grid.Column="0" Grid.Row="2" Margin="0,0,10,0">
+                        <TextBlock Text="E-mail" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                        <TextBox x:Name="txtEmail" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
+                    </StackPanel>
+
+                    <!-- Condição de pagamento -->
+                    <StackPanel Grid.Column="1" Grid.Row="2" Margin="0,0,0,0">
+                        <TextBlock Text="Condição Pagamento" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                        <ComboBox x:Name="cmbPagamento" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1">
+                            <ComboBoxItem Content="À Vista" IsSelected="True"/>
+                            <ComboBoxItem Content="30 Dias"/>
+                            <ComboBoxItem Content="Parcelado"/>
+                        </ComboBox>
+                    </StackPanel>
+                </Grid>
+            </GroupBox>
+
+            <!-- Informações do Veículo -->
+            <GroupBox Grid.Column="1" Header="🚗 Informações do Veículo" Margin="5">
+                <Grid Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Data e Hora/KM -->
+                    <StackPanel Grid.Column="0" Grid.Row="0" Margin="0,0,10,8">
+                        <TextBlock Text="Data" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                        <TextBox x:Name="txtData" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1" Grid.Row="0" Margin="0,0,0,8">
+                        <TextBlock Text="Hora/KM" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                        <TextBox x:Name="txtHoraKm" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
+                    </StackPanel>
+
+                    <!-- Veículo e Modelo -->
+                    <StackPanel Grid.Column="0" Grid.Row="1" Margin="0,0,10,0">
+                        <TextBlock Text="Veículo" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                        <TextBox x:Name="txtVeiculo" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1" Grid.Row="1" Margin="0,0,0,0">
+                        <TextBlock Text="Modelo" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                        <TextBox x:Name="txtModelo" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
+                    </StackPanel>
+                </Grid>
+            </GroupBox>
         </Grid>
 
-        <!-- Informações do cliente - Linha 2 -->
-        <Grid Grid.Row="3" Grid.ColumnSpan="2" Margin="0,0,0,10">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1.2*"/>
-            </Grid.ColumnDefinitions>
+        <!-- Endereço do Cliente -->
+        <GroupBox Grid.Row="3" Header="📍 Endereço do Cliente" Margin="0,0,0,10">
+            <Grid Margin="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="1.5*"/>
+                </Grid.ColumnDefinitions>
 
-            <!-- Endereço -->
-            <StackPanel Grid.Column="0" Margin="5">
-                <TextBlock Text="Endereço" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtEndereco" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
-            </StackPanel>
+                <!-- Endereço -->
+                <StackPanel Grid.Column="0" Margin="5">
+                    <TextBlock Text="Endereço" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                    <TextBox x:Name="txtEndereco" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
+                </StackPanel>
 
-            <!-- Bairro -->
-            <StackPanel Grid.Column="1" Margin="5">
-                <TextBlock Text="Bairro" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtBairro" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
-            </StackPanel>
+                <!-- Bairro -->
+                <StackPanel Grid.Column="1" Margin="5">
+                    <TextBlock Text="Bairro" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                    <TextBox x:Name="txtBairro" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
+                </StackPanel>
 
-            <!-- Cidade -->
-            <StackPanel Grid.Column="2" Margin="5">
-                <TextBlock Text="Cidade" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtCidade" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
-            </StackPanel>
+                <!-- Cidade -->
+                <StackPanel Grid.Column="2" Margin="5">
+                    <TextBlock Text="Cidade" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                    <TextBox x:Name="txtCidade" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
+                </StackPanel>
 
-            <!-- Estado -->
-            <StackPanel Grid.Column="3" Margin="5">
-                <TextBlock Text="Estado" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtEstado" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
-            </StackPanel>
+                <!-- CEP -->
+                <StackPanel Grid.Column="3" Margin="5">
+                    <TextBlock Text="CEP" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                    <TextBox x:Name="txtCEP" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
 
-            <!-- CEP -->
-            <StackPanel Grid.Column="4" Margin="5">
-                <TextBlock Text="CEP" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtCEP" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
-            </StackPanel>
-
-            <!-- Condição de pagamento -->
-            <StackPanel Grid.Column="5" Margin="5">
-                <TextBlock Text="Condição Pagamento" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <ComboBox x:Name="cmbPagamento" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1">
-                    <ComboBoxItem Content="À Vista" IsSelected="True"/>
-                    <ComboBoxItem Content="30 Dias"/>
-                    <ComboBoxItem Content="Parcelado"/>
-                </ComboBox>
-            </StackPanel>
-        </Grid>
-
-        <!-- Dados do veículo -->
-        <Grid Grid.Row="4" Grid.ColumnSpan="2" Margin="0,0,0,10">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-            </Grid.ColumnDefinitions>
-
-            <!-- Data -->
-            <StackPanel Grid.Column="0" Margin="5">
-                <TextBlock Text="Data" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtData" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
-            </StackPanel>
-
-            <!-- Hora/KM -->
-            <StackPanel Grid.Column="1" Margin="5">
-                <TextBlock Text="Hora/KM" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtHoraKm" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
-            </StackPanel>
-
-            <!-- Veículo -->
-            <StackPanel Grid.Column="2" Margin="5">
-                <TextBlock Text="Veículo" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtVeiculo" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
-            </StackPanel>
-
-            <!-- Modelo -->
-            <StackPanel Grid.Column="3" Margin="5">
-                <TextBlock Text="Modelo" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtModelo" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
-            </StackPanel>
-
-            <!-- Marca -->
-            <StackPanel Grid.Column="4" Margin="5">
-                <TextBlock Text="Marca" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtMarca" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
-            </StackPanel>
-
-            <!-- Patrimônio/Placa -->
-            <StackPanel Grid.Column="5" Margin="5">
-                <TextBlock Text="Patrimônio/Placa" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtPatrimonioPlaca" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
-            </StackPanel>
-        </Grid>
-
-        <!-- Dados da transportadora -->
-        <Grid Grid.Row="5" Grid.ColumnSpan="2" Margin="0,0,0,10">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1.5*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1.5*"/>
-            </Grid.ColumnDefinitions>
-
-            <!-- Transportadora -->
-            <StackPanel Grid.Column="0" Margin="5">
-                <TextBlock Text="Transportadora" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtTransportadora" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
-            </StackPanel>
-
-            <!-- Tipo de frete -->
-            <StackPanel Grid.Column="1" Margin="5">
-                <TextBlock Text="Tipo de frete" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <ComboBox x:Name="cmbTipoFrete" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1">
-                    <ComboBoxItem Content="CIF"/>
-                    <ComboBoxItem Content="FOB"/>
-                </ComboBox>
-            </StackPanel>
-
-            <!-- Número do Documento -->
-            <StackPanel Grid.Column="2" Margin="5">
-                <TextBlock Text="Nº Documento" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtNumeroDocumento" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
-            </StackPanel>
-
-            <!-- Validade -->
-            <StackPanel Grid.Column="3" Margin="5">
-                <TextBlock Text="Validade" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtValidade" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
-            </StackPanel>
-
-            <!-- Emissão -->
-            <StackPanel Grid.Column="4" Margin="5">
-                <TextBlock Text="Emissão" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtEmissao" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
-            </StackPanel>
-
-            <!-- Condição pagamento -->
-            <StackPanel Grid.Column="5" Margin="5">
-                <TextBlock Text="Cond. Pagamento" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                <TextBox x:Name="txtCondicaoPagamento" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" PreviewKeyDown="TextBox_KeyDown"/>
-            </StackPanel>
-        </Grid>
-
-        <!-- Área principal -->
-        <Grid Grid.Row="6" Grid.ColumnSpan="2" Margin="0,5,0,0">
+        <!-- Área principal de itens -->
+        <Grid Grid.Row="4" Margin="0,5,0,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="Auto"/>
@@ -512,7 +461,7 @@
         </Grid>
 
         <!-- Rodapé com botões de ação -->
-        <Grid Grid.Row="7" Grid.ColumnSpan="2" Margin="0,15,0,0">
+        <Grid Grid.Row="5" Margin="0,15,0,0">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <Button Content="Cancelar" Width="120" Height="35" Margin="0,0,10,0" Click="BtnCancelar_Click"
                         Background="#F5F5F5" BorderBrush="#E0E0E0" FontWeight="SemiBold"/>

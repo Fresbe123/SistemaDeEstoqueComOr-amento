@@ -35,7 +35,7 @@ namespace GestãoEstoque.ClassesOrganização
             if (writer.PageNumber == 1 && _logo != null)
             {
                 float posX = 25;
-                float posY = PageSize.A4.Height - 110;
+                float posY = PageSize.A4.Height - 85;
 
                 _logo.SetAbsolutePosition(posX, posY);
                 writer.DirectContent.AddImage(_logo);

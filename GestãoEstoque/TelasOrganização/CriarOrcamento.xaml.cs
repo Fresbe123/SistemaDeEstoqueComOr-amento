@@ -36,7 +36,8 @@ namespace GestãoEstoque
             VerificarControles();
 
             // Gerar número do orçamento
-            _numeroOrcamento = $"ORC_{DateTime.Now:yyyyMMddHHmmss}";
+            int numeroOrcamentoInt = SequenciaManager.ObterProximoOrcamento();
+            _numeroOrcamento = $"ORÇ-{numeroOrcamentoInt}"; // ORÇ-500, ORÇ-501, etc.
             txtNumeroOrcamento.Text = $"Número: {_numeroOrcamento}";
 
             // Inicializar campo cliente
@@ -238,7 +239,7 @@ namespace GestãoEstoque
             this.Close();
         }
 
-        // NOVO BOTÃO: Salvar Orçamento
+        // Salvar Orçamento
         private void BtnSalvarOrcamento_Click(object sender, RoutedEventArgs e)
         {
             if (ItensSelecionados.Count == 0)
@@ -263,7 +264,7 @@ namespace GestãoEstoque
                 // Gerar o PDF primeiro
                 string caminhoArquivo = GerarPdfOrcamento();
 
-                // NOVO: Salvar dados completos do orçamento
+                // Salvar dados completos do orçamento
                 SalvarDadosOrcamentoCompleto(caminhoArquivo);
 
                 // Registrar o orçamento no sistema
@@ -273,7 +274,8 @@ namespace GestãoEstoque
                     Data = DateTime.Now.ToString("dd/MM/yyyy HH:mm"),
                     ValorTotal = CalcularTotalGeral(),
                     CaminhoArquivo = caminhoArquivo,
-                    Tipo = "Orçamento"
+                    Tipo = "Orçamento",
+                    NumeroDocumento = _numeroOrcamento
                 };
 
                 GestãoEstoque.ClassesOrganização.RelatorioOSmanager.Registrar(rel);
@@ -281,6 +283,7 @@ namespace GestãoEstoque
                 // Perguntar se quer salvar uma cópia em local específico
                 var result = MessageBox.Show(
                     $"Orçamento salvo com sucesso!\n\n" +
+                    $"Número: {_numeroOrcamento}\n" +
                     $"Cliente: {txtCliente.Text}\n" +
                     $"Número: {_numeroOrcamento}\n" +
                     $"Valor Total: {CalcularTotalGeral():C}\n\n" +
@@ -340,11 +343,21 @@ namespace GestãoEstoque
         {
             public string NumeroOrcamento { get; set; }
             public string Cliente { get; set; }
+            public DateTime DataEmissao { get; set; }
+
             public List<ItemOrcamentoDados> Itens { get; set; }
             public decimal KmPercorridos { get; set; }
             public decimal ValorPorKm { get; set; }
             public decimal ValorDeslocamento { get; set; }
             public decimal ValorMaoDeObra { get; set; }
+
+            public DadosOrcamento()
+            {
+                DataEmissao = DateTime.Now;
+                int numero = SequenciaManager.ObterProximoOrcamento();
+                NumeroOrcamento = $"ORÇ-{numero}";
+            }
+
         }
 
         public class ItemOrcamentoDados
@@ -405,7 +418,7 @@ namespace GestãoEstoque
             {
                 string caminhoArquivo = GerarPdfOrcamento();
 
-                // NOVO: Salvar dados completos do orçamento
+                //Salvar dados completos do orçamento
                 SalvarDadosOrcamentoCompleto(caminhoArquivo);
 
                 // Registrar também quando gerar PDF (para manter compatibilidade)
@@ -451,7 +464,7 @@ namespace GestãoEstoque
         {
             string caminhoArquivo = System.IO.Path.Combine(
                 Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
-                $"Orçamento_{_numeroOrcamento}.pdf"
+                $"ORÇAMENTO_{_numeroOrcamento.Replace("ORÇ-", "")}.pdf" // ORÇAMENTO_500.pdf
             );
 
             // Configurações do documento com margens REDUZIDAS
@@ -516,7 +529,8 @@ namespace GestãoEstoque
             doc.Add(iTextSharp.text.Chunk.NEWLINE);
 
             // TÍTULO "ORÇAMENTO"
-            iTextSharp.text.Paragraph titulo = new iTextSharp.text.Paragraph("ORÇAMENTO", fTituloPrincipal);
+            iTextSharp.text.Paragraph titulo = new iTextSharp.text.Paragraph(
+                $"ORÇAMENTO Nº {_numeroOrcamento}", fTituloPrincipal);
             titulo.Alignment = iTextSharp.text.Element.ALIGN_CENTER;
             titulo.SpacingAfter = 8f;
             doc.Add(titulo);
@@ -934,8 +948,7 @@ namespace GestãoEstoque
                         decimal.TryParse(valorPorKmTexto, NumberStyles.Currency, CultureInfo.GetCultureInfo("pt-BR"), out valorPorKm);
                     }
 
-                    emitirOS.ReceberDadosOrcamento(itensOrcamento, _valorDeslocamento, _valorMaoDeObra, _numeroOrcamento, kmPercorridos, valorPorKm);
-
+                    emitirOS.ReceberDadosOrcamento(itensOrcamento, _valorDeslocamento, _valorMaoDeObra, kmPercorridos, valorPorKm);
                     this.Close();
                     emitirOS.ShowDialog();
                 }

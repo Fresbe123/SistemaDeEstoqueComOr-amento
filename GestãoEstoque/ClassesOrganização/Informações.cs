@@ -36,7 +36,7 @@ namespace GestãoEstoque.ClassesOrganização
             public string Email { get; set; } = "________________________";
         }
 
-        // Classe para dados adicionais
+        // Classe para dados adicionais (compartilhada)
         public class DadosAdicionais
         {
             public string Data { get; set; } = DateTime.Now.ToString("dd/MM/yyyy");
@@ -49,7 +49,7 @@ namespace GestãoEstoque.ClassesOrganização
             public string PatrimonioPlaca { get; set; } = "__________________";
         }
 
-        // Classe para dados da transportadora
+        // Classe para dados da transportadora (apenas para orçamento)
         public class Transportadora
         {
             public string Nome { get; set; } = "________________________";
@@ -62,6 +62,7 @@ namespace GestãoEstoque.ClassesOrganização
             public string Observacoes { get; set; } = "________________________";
         }
 
+        // Classe para deslocamento (compartilhada)
         public class Deslocamento
         {
             public decimal KmPercorridos { get; set; }
@@ -69,23 +70,77 @@ namespace GestãoEstoque.ClassesOrganização
             public decimal ValorDeslocamento { get; set; }
         }
 
-        // Classe principal que agrupa todos os dados do orçamento
-        public class Orcamento
+        // CLASSE PARA ORDEM DE SERVIÇO (OS)
+        public class OrdemServico
         {
+            // Identificação
+            public int NumeroOS { get; set; } // Ex: 3001, 3002, 3003...
+            public DateTime DataEmissao { get; set; }
+
+            // Dados do estabelecimento
             public Emitente Emitente { get; set; } = new Emitente();
+
+            // Dados do cliente
             public Destinatario Destinatario { get; set; } = new Destinatario();
-            public DadosAdicionais DadosAdicionais { get; set; } = new DadosAdicionais();
-            public Transportadora Transportadora { get; set; } = new Transportadora();
+
+            // Dados do veículo/serviço
+            public DadosAdicionais DadosVeiculo { get; set; } = new DadosAdicionais();
+
+            // Custos
             public Deslocamento Deslocamento { get; set; } = new Deslocamento();
+            public decimal ValorMaoDeObra { get; set; }
+
+            // Itens da OS
             public List<ItemEstoque> Itens { get; set; } = new List<ItemEstoque>();
             public decimal ValorTotal { get; set; }
-            public decimal ValorMaoDeObra { get; set; }
-            public decimal ValorTotalComDeslocamento => ValorTotal + (Deslocamento?.ValorDeslocamento ?? 0);
-            public bool EhOrcamento { get; set; } = false;
-            public string NumeroOrcamento { get; set; } = "";
-            public DateTime DataValidade { get; set; } = DateTime.Now.AddDays(30);
+
+            // Informações adicionais da OS
+            public string Vendedor { get; set; } = "________________";
+            public string Observacoes { get; set; } = "________________________";
+
+            // Construtor
+            public OrdemServico()
+            {
+                DataEmissao = DateTime.Now;
+            }
         }
 
+        // CLASSE PARA ORÇAMENTO (mantém a original)
+        public class Orcamento
+        {
+            // Identificação
+            public int NumeroOrcamento { get; set; } // Ex: 500, 501, 502...
+            public DateTime DataEmissao { get; set; }
+            public DateTime DataValidade { get; set; } = DateTime.Now.AddDays(30);
 
+            // Dados do estabelecimento
+            public Emitente Emitente { get; set; } = new Emitente();
+
+            // Dados do cliente
+            public Destinatario Destinatario { get; set; } = new Destinatario();
+
+            // Dados adicionais
+            public DadosAdicionais DadosAdicionais { get; set; } = new DadosAdicionais();
+
+            // Dados da transportadora (apenas para orçamento)
+            public Transportadora Transportadora { get; set; } = new Transportadora();
+
+            // Custos
+            public Deslocamento Deslocamento { get; set; } = new Deslocamento();
+            public decimal ValorMaoDeObra { get; set; }
+
+            // Itens do orçamento
+            public List<ItemEstoque> Itens { get; set; } = new List<ItemEstoque>();
+            public decimal ValorTotal { get; set; }
+
+            // Propriedades calculadas
+            public decimal ValorTotalComDeslocamento => ValorTotal + (Deslocamento?.ValorDeslocamento ?? 0);
+
+            // Construtor
+            public Orcamento()
+            {
+                DataEmissao = DateTime.Now;
+            }
+        }
     }
 }

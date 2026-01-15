@@ -9,6 +9,7 @@
       "GestãoEstoque/1.0.0": {
         "dependencies": {
           "ModernWpfUI": "0.9.6",
+          "Newtonsoft.Json": "13.0.4",
           "System.Text.Json": "10.0.0",
           "iTextSharp": "5.5.13.4"
         },
@@ -433,6 +434,14 @@
           }
         }
       },
+      "Newtonsoft.Json/13.0.4": {
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.4.30916"
+          }
+        }
+      },
       "System.IO.Pipelines/10.0.0": {
         "runtime": {
           "lib/net8.0/System.IO.Pipelines.dll": {
@@ -497,6 +506,13 @@
       "sha512": "sha512-eWe90HciyudQQtZVbZ9QFssS74BwK69W7cBd52AEZHmrsS4hrSA+/BpUbAFWzzFDH6FBE1xsHPiRC+wHS7xgJw==",
       "path": "modernwpfui/0.9.6",
       "hashPath": "modernwpfui.0.9.6.nupkg.sha512"
+    },
+    "Newtonsoft.Json/13.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pdgNNMai3zv51W5aq268sujXUyx7SNdE2bj1wZcWjAQrKMFZV260lbqYop1d2GM67JI1huLRwxo9ZqnfF/lC6A==",
+      "path": "newtonsoft.json/13.0.4",
+      "hashPath": "newtonsoft.json.13.0.4.nupkg.sha512"
     },
     "System.IO.Pipelines/10.0.0": {
       "type": "package",
