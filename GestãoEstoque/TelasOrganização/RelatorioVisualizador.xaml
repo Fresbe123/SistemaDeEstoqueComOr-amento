@@ -27,7 +27,6 @@
                                FontWeight="Bold"/>
                 </StackPanel>
 
-                <!-- Contadores SIMPLES -->
                 <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center">
                     <!-- Contador de OS -->
                     <Border Background="#4CAF50" CornerRadius="3" Padding="10,6" Margin="0,0,10,0">
@@ -73,10 +72,7 @@
             <Button Content="Ver Todos" Click="BtnVerTodos_Click" Width="80" Margin="5"/>
             <Button Content="Gerar OS" Click="BtnGerarOS_Click" Width="80" Margin="5" Background="Green" Foreground="White"/>
             <Button Content="Exportar CSV" Click="BtnExportarCSV_Click" Width="100" Margin="5"/>
-            <Button Content="🔧 Corrigir Números" Click="BtnCorrigirNumeros_Click" Width="120" Margin="5" Background="#9C27B0" Foreground="White"/>
-            <Button Content="📋 Detalhes" Click="BtnDetalhes_Click" Width="80" Margin="5" Background="#607D8B" Foreground="White"/>
-            <Button Content="🗑️ Deletar" Click="BtnDeletar_Click" Width="80" Margin="5" Background="#F44336" Foreground="White" FontWeight="SemiBold" ToolTip="Deletar OS/Orçamento selecionado"/>
-            <Button Content="🗑️ Deletar Múltiplos" Click="BtnDeletarMultiplos_Click" Width="120" Margin="5" Background="#D32F2F" Foreground="White" FontWeight="SemiBold" ToolTip="Deletar vários itens selecionados"/>
+            <Button Content="🗑️ Deletar" Click="BtnDeletarMultiplos_Click" Width="120" Margin="5" Background="#D32F2F" Foreground="White" FontWeight="SemiBold" ToolTip="Deletar vários itens selecionados"/>
 
 
             <!-- Adicione este botão TEMPORÁRIO no seu XAML, pode ser no final do StackPanel de botões -->

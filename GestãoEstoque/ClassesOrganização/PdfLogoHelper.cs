@@ -34,7 +34,6 @@ namespace GestãoEstoque.ClassesOrganização
 
             if (writer.PageNumber == 1 && _logo != null)
             {
-                // Posição exata como você quer:
                 float posX = 35;
                 float posY = PageSize.A4.Height - 110;
 

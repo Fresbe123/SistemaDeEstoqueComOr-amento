@@ -21,6 +21,8 @@ namespace GestãoEstoque.ClassesOrganização
 
     public class ItemOrcamentoDados
     {
+        public string Item {  get; set; }
+        public string Un {  get; set; }
         public string Codigo { get; set; }
         public string Nome { get; set; }
         public string Descricao { get; set; }

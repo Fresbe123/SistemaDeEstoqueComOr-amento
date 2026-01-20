@@ -130,7 +130,7 @@
                             Click="BtnCriarOrcamento_Click"/>
 
                     <!-- Apenas Favoritos -->
-                    <Button Content="⭐ Apenas Favoritos" 
+                    <Button Content="📌 Apenas Favoritos" 
                             Style="{StaticResource MenuButtonStyle}"
                             Click="MostrarApenasFavoritos_Click"/>
 

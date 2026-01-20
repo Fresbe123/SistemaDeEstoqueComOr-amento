@@ -213,7 +213,7 @@ namespace GestãoEstoque
                 // Restaura lista completa
                 dgProdutos.ItemsSource = _todosItensBackup;
                 _mostrandoApenasFavoritos = false;
-                botao.Content = "⭐ Apenas Favoritos";
+                botao.Content = "📌 Apenas Favoritos";
             }
         }
 

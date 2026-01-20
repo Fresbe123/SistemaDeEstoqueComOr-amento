@@ -35,10 +35,8 @@ namespace GestãoEstoque
             InitializeComponent();
             VerificarControles();
 
-            // Gerar número do orçamento
-            int numeroOrcamentoInt = SequenciaManager.ObterProximoOrcamento();
-            _numeroOrcamento = $"ORÇ-{numeroOrcamentoInt}"; // ORÇ-500, ORÇ-501, etc.
-            txtNumeroOrcamento.Text = $"Número: {_numeroOrcamento}";
+            // Não gerar número do orçamento
+            _numeroOrcamento = "A definir";
 
             // Inicializar campo cliente
             txtCliente.Text = "";
@@ -74,6 +72,15 @@ namespace GestãoEstoque
                 Total = original.Total,
                 Favorito = original.Favorito
             };
+        }
+
+        private void GerarNumeroOrcamento()
+        {
+            if (_numeroOrcamento == "A definir")
+            {
+                int numeroOrcamentoInt = SequenciaManager.ObterProximoOrcamento();
+                _numeroOrcamento = $"ORÇ-{numeroOrcamentoInt}";
+            }
         }
 
         private void AtualizarTotalGeral()
@@ -249,7 +256,6 @@ namespace GestãoEstoque
                 return;
             }
 
-            // Verificar se o cliente foi preenchido
             if (string.IsNullOrEmpty(txtCliente.Text.Trim()))
             {
                 MessageBox.Show("Por favor, informe o nome do cliente.", "Campo Obrigatório",
@@ -258,16 +264,14 @@ namespace GestãoEstoque
                 return;
             }
 
-
             try
             {
-                // Gerar o PDF primeiro
+                GerarNumeroOrcamento();
+
                 string caminhoArquivo = GerarPdfOrcamento();
 
-                // Salvar dados completos do orçamento
                 SalvarDadosOrcamentoCompleto(caminhoArquivo);
 
-                // Registrar o orçamento no sistema
                 var rel = new GestãoEstoque.ClassesOrganização.RelatorioOS
                 {
                     Cliente = txtCliente.Text.Trim(),
@@ -280,12 +284,10 @@ namespace GestãoEstoque
 
                 GestãoEstoque.ClassesOrganização.RelatorioOSmanager.Registrar(rel);
 
-                // Perguntar se quer salvar uma cópia em local específico
                 var result = MessageBox.Show(
                     $"Orçamento salvo com sucesso!\n\n" +
                     $"Número: {_numeroOrcamento}\n" +
                     $"Cliente: {txtCliente.Text}\n" +
-                    $"Número: {_numeroOrcamento}\n" +
                     $"Valor Total: {CalcularTotalGeral():C}\n\n" +
                     $"Deseja salvar uma cópia em outra pasta?",
                     "Orçamento Salvo",
@@ -313,9 +315,19 @@ namespace GestãoEstoque
 
             txtCliente.Text = dados.Cliente;
             _numeroOrcamento = dados.NumeroOrcamento;
-            txtNumeroOrcamento.Text = $"Número: {_numeroOrcamento}";
 
             ItensSelecionados.Clear();
+
+            if (!string.IsNullOrEmpty(dados.NumeroOrcamento))
+            {
+                _numeroOrcamento = dados.NumeroOrcamento;
+            }
+            else
+            {
+                _numeroOrcamento = "A definir";
+            }
+
+
 
             foreach (var item in dados.Itens)
             {
@@ -416,6 +428,8 @@ namespace GestãoEstoque
 
             try
             {
+                GerarNumeroOrcamento();
+
                 string caminhoArquivo = GerarPdfOrcamento();
 
                 //Salvar dados completos do orçamento
@@ -970,7 +984,7 @@ namespace GestãoEstoque
                 ("txtValorPorKm", txtValorPorKm),
                 ("txtValorDeslocamento", txtValorDeslocamento),
                 ("txtMaoDeObra", txtMaoDeObra),
-                ("txtCliente", txtCliente) // Adicionado o novo controle
+                ("txtCliente", txtCliente) 
             };
 
             foreach (var (nome, controle) in controles)
@@ -985,7 +999,7 @@ namespace GestãoEstoque
         // Classe para dados completos do orçamento
         public class DadosOrcamentoCompleto
         {
-            public string NumeroOrcamento { get; set; }
+            public string NumeroOrcamento { get; set; } = "A definir";
             public string Cliente { get; set; }
             public DateTime Data { get; set; }
             public List<ItemOrcamentoDadosCompleto> Itens { get; set; }

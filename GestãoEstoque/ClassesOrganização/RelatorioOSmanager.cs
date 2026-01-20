@@ -35,7 +35,6 @@ namespace GestãoEstoque.ClassesOrganização
                     var lista = JsonConvert.DeserializeObject<List<RelatorioOS>>(json);
                     _relatorios = new ObservableCollection<RelatorioOS>(lista);
 
-                    // Sincroniza os números com o SequenciaManager
                     SincronizarSequenciaisComManager();
                 }
                 else
@@ -50,7 +49,7 @@ namespace GestãoEstoque.ClassesOrganização
             }
         }
 
-        // NOVO MÉTODO: Sincroniza com SequenciaManager
+        // Sincroniza com SequenciaManager
         private static void SincronizarSequenciaisComManager()
         {
             if (!_relatorios.Any()) return;
@@ -93,20 +92,14 @@ namespace GestãoEstoque.ClassesOrganização
             }
         }
 
-        // MÉTODO MODIFICADO: Remove a chamada ao SequenciaManager
         public static void Registrar(RelatorioOS r)
         {
-            // Determina o próximo ID baseado no maior ID existente
             int novoId = Relatorios.Count > 0 ? Relatorios.Max(x => x.Id) + 1 : 1;
             r.Id = novoId;
-
-            // IMPORTANTE: NÃO chama SequenciaManager aqui!
-            // O número já deve vir preenchido quando o objeto é criado
 
             Relatorios.Add(r);
             SalvarRelatorios();
 
-            // Sincroniza após adicionar
             if (r.Tipo == "OS" && r.Numero > 0)
             {
                 SequenciaManager.SincronizarNumeroOS(r.Numero);
@@ -122,14 +115,12 @@ namespace GestãoEstoque.ClassesOrganização
         {
             bool correcaoNecessaria = false;
 
-            // Verifica OS sem número
             var osList = Relatorios.Where(r => r.Tipo == "OS" && r.Numero == 0).ToList();
             if (osList.Any())
             {
                 correcaoNecessaria = true;
                 int numeroAtualOS = 3000;
 
-                // Pega o maior número de OS existente
                 var osComNumero = Relatorios.Where(r => r.Tipo == "OS" && r.Numero > 0).ToList();
                 if (osComNumero.Any())
                 {
@@ -150,7 +141,6 @@ namespace GestãoEstoque.ClassesOrganização
                 correcaoNecessaria = true;
                 int numeroAtualOrc = 500;
 
-                // Pega o maior número de Orçamento existente
                 var orcComNumero = Relatorios.Where(r => r.Tipo == "Orçamento" && r.Numero > 0).ToList();
                 if (orcComNumero.Any())
                 {
@@ -168,7 +158,6 @@ namespace GestãoEstoque.ClassesOrganização
             if (correcaoNecessaria)
             {
                 SalvarRelatorios();
-                // Sincroniza novamente
                 SincronizarSequenciaisComManager();
             }
         }

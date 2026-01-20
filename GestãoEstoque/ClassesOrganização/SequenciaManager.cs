@@ -46,7 +46,7 @@ namespace GestãoEstoque.ClassesOrganização
             }
         }
 
-        // Método CORRIGIDO: Retorna o próximo número e INCREMENTA
+        // Retorna o próximo número e INCREMENTA
         public static int ObterProximaOS()
         {
             var numeros = CarregarNumeros();
@@ -56,7 +56,7 @@ namespace GestãoEstoque.ClassesOrganização
             return numero;
         }
 
-        // Método CORRIGIDO: Retorna o próximo número e INCREMENTA
+        // Retorna o próximo número e INCREMENTA
         public static int ObterProximoOrcamento()
         {
             var numeros = CarregarNumeros();
@@ -79,11 +79,9 @@ namespace GestãoEstoque.ClassesOrganização
             return numeros.ProximoOrcamento;
         }
 
-        // NOVO MÉTODO: Para usar quando já tem o número
         public static void SincronizarNumeroOS(int numeroUsado)
         {
             var numeros = CarregarNumeros();
-            // Se o número usado for maior ou igual ao próximo, atualiza
             if (numeroUsado >= numeros.ProximaOS)
             {
                 numeros.ProximaOS = numeroUsado + 1;
@@ -91,11 +89,9 @@ namespace GestãoEstoque.ClassesOrganização
             }
         }
 
-        // NOVO MÉTODO: Para usar quando já tem o número
         public static void SincronizarNumeroOrcamento(int numeroUsado)
         {
             var numeros = CarregarNumeros();
-            // Se o número usado for maior ou igual ao próximo, atualiza
             if (numeroUsado >= numeros.ProximoOrcamento)
             {
                 numeros.ProximoOrcamento = numeroUsado + 1;

@@ -1,0 +1,17 @@
+{
+  "Id": 8,
+  "Cliente": "Neto",
+  "Data": "17/01/2026 14:08",
+  "ValorTotal": 1.00,
+  "CaminhoArquivo": "C:\\Users\\Neto\\Documents\\ORÇAMENTO_507.pdf",
+  "Tipo": "Orçamento",
+  "Numero": 506,
+  "NumeroFormatado": "ORC_000506",
+  "NumeroDocumento": "ORÇ-507",
+  "NumeroOrcamento": null,
+  "ValorDeslocamento": 0.0,
+  "ValorMaoDeObra": 0.0,
+  "KmPercorridos": 0.0,
+  "ValorPorKm": 0.0,
+  "ItensSerializados": null
+}
